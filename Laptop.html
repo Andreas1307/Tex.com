@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tex.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-bundle-css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+</head>
+<body class="">
+    <div class="navbar">
+        <nav>
+
+        <div class="logo-search">
+            <a href="index.html" class="logo">Tex.com</a>
+            <div class="row">
+                <div class="search-bar">
+                    <input id="search" class="search-input" type="text" placeholder="What Are You Looking For?">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="result-box">
+                
+            </div>
+            </div>
+            
+           
+            
+        </div>
+         <span class="collapsible-bar"><i id="bar" class="fa-solid fa-bars"></i></span>
+        <div class="cart-account">
+            <div class="cart">
+                <img src="img/cart img.png" alt="">
+                <span class="quantity">0</span>
+                
+            </div>
+            <div  class="account">
+                <div onclick="hideShow()" class="account-sbox">
+                    <i class="fa-solid fa-user"></i>
+                <h2>Account</h2>
+                <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                
+                <div class="no-account">
+                   <div class="account-box">
+                    <p>Enter your email adress</p>
+                    <input type="text" placeholder="Enter your email adress">
+                   </div>
+                   <div class="account-box">
+                    <p>Password</p>
+                    <input type="text" placeholder="Password">
+                   </div>
+                   <button>Login</button>
+                   <div>
+                    <a href="#">Recover Password</a>
+                   </div>
+                   <div>
+                    <a href="#">Register</a>
+                   </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </nav>  
+    </div>
+   
+    <header id="header">
+
+            <ul class="slide-opt">
+                <li class="option"><a href="Phones and tablets.html">Phones</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tablets.html">Tablets</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="laptop.html">Laptops/Pc</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="gaming.html">Gaming, Games</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tv.html">Tv</a><i class="fa-solid fa-chevron-right"></i></li>
+            <span class="close-icon"><i id="close-icon" class="fa-solid fa-chevron-right"></i></span>
+            </ul>
+        
+        <div class="products-bar">
+            <div onclick="optionShowHide()" class="select-menu">
+                <div class="select-btn">
+                <span class="sBtn-text"><i class="fa-solid fa-bars"></i> Products</span>
+            </div>
+            <ul class="options">
+                <li class="option"><a href="Phones and tablets.html">Phones</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tablets.html">Tablets</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="laptop.html">Laptops/Pc</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="gaming.html">Gaming, Games</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tv.html">Tv</a><i class="fa-solid fa-chevron-right"></i></li>
+            </ul>
+            </div>
+            
+            <div class="bar-option">
+                <h2><a href="gifts.html">Promotions</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="finance.html">Finance</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="customersupport.html">Customer Support</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="stores.html">Stores</a></h2>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="main-div">
+        <div class="select-bar">
+            <h2>Availability</h2>
+            <a href="Laptop.html" class="select-box">
+                <input type="checkbox" checked readonly>
+                <p>In Stock <span>(10)</span></p>
+            </a>
+            <a href="" class="select-box">
+                <input type="checkbox">
+                <p>Repackaged <span>(0)</span></p>
+            </a>
+            <h2>Price</h2>
+            <a href="Laptop under $500.html" class="select-box">
+                <input type="checkbox">
+                <p>Under $500 <span>(3)</span></p>
+            </a>
+            <a href="Laptop $500-$900.html" class="select-box">
+                <input type="checkbox">
+                <p>$500-$900 <span>(4)</span></p>
+            </a>
+            <a href="Laptop over $900.html" class="select-box">
+                <input type="checkbox">
+                <p>Over $900 <span>(2)</span></p>
+            </a>
+            <h2>Storage</h2>
+            <a href="Laptop intelcore.html" class="select-box">
+                <input type="checkbox">
+                <p>IntelCore <span>(6)</span></p>
+            </a>
+            <a href="Laptop amdryzen.html" class="select-box">
+                <input type="checkbox">
+                <p>AMD Ryzen<span>(4)</span></p>
+            </a>
+            <h2>Color</h2>
+            <a class="color-box">
+                <a href="Laptop black.html" class="select-box">
+                    <input type="checkbox">
+                    <p>Black <span>(10)</span></p>
+                </a>
+                <a href="" class="select-box">
+                    <input type="checkbox">
+                    <p>Blue<span>(0)</span></p>
+                </a>
+                <a href="" class="select-box">
+                    <input type="checkbox">
+                    <p>Red<span>(0)</span></p>
+                </a>
+                <a href="" class="select-box">
+                    <input type="checkbox">
+                    <p>White<span>(0)</span></p>
+                </a>
+                <a href="" class="select-box">
+                    <input type="checkbox">
+                    <p>Silver<span>(0)</span></p>
+                </a>
+                <a href="" class="select-box">
+                    <input type="checkbox">
+                    <p>Orange<span>(0)</span></p>
+                </a>
+            </a>
+        </div> 
+        <div class="main-content">
+          <div class="main-laptop1"></div>
+          <div class="main-laptop2"></div>
+          <div class="main-laptop3"></div>
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <h1>Your Cart</h1>
+        <ul class="listCard16"></ul>
+        <div class="checkOut">
+            <div class="total">CheckOut  Now</div>
+            <div class="closeShopping">Close</div>
+        </div>
+       </div>
+
+
+<div class="footer-bar">
+    <img src="img/best-buy-icon.png">
+    <span>
+        <h2>The best price-quality ratio</h2>
+        <p>According to the Best Buy Award 2023/2024 survey conducted by the iCertias organization.</p>
+    </span>
+    <div class="download-icons">
+        <img class="google-play" src="img/google play.jpg" alt="">
+        <img class="app-store" src="img/app store.jpg" alt="">
+    </div>
+</div>
+       
+<footer>
+    <div class="footer-box">
+        <h2>About Tex</h2>
+        <p>About us</p>
+        <p>Marketplace</p>
+        <p>Careers</p>
+        <p>Products Categories</p>
+        <p>Tax free</p>
+    </div>
+    <div class="footer-box">
+        <h2>Clients Support</h2>
+        <p>Support articles</p>
+        <p>Contact</p>
+        <p>Return products</p>
+        <p>Complaints</p>
+    </div>
+    <div class="footer-box">
+        <h2>Legal information</h2>
+        <p>information about DEEE</p>
+        <p>Cookies policy</p>
+        <p>Terms and conditions</p>
+        <p>A.N.P.C.</p>
+    </div>
+    <div class="footer-box contact">
+        <h2>Contact</h2>
+        <p>Phone: [123]-456-789</p>
+        <p>Contact Form</p>
+    </div>
+    <div class="footer-box communication">
+        <h2>Communication</h2>
+        <p>Subscribe to newsletter</p>
+    </div>
+    <div class="footer-box">
+        <h2>Follow-us</h2>
+        <span>
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-x-twitter"></i></div>
+            <div><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><i class="fa-brands fa-youtube"></i></div>
+        </span>
+            
+    </div>
+</footer>
+
+<script src="swiper-bundle js.js"></script>
+<script src="https://kit.fontawesome.com/5111c4ecb9.js" crossorigin="anonymous"></script>
+<script src="Laptop.js"></script>
+</body>
+</html>

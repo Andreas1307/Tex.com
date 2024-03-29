@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tex.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-bundle-css.css">
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+</head>
+<body class="">
+    <div class="navbar">
+        <nav>
+
+        <div class="logo-search">
+            <a href="index.html" class="logo">Tex.com</a>
+            <div class="row">
+                <div class="search-bar">
+                    <input id="search" class="search-input" type="text" placeholder="What Are You Looking For?">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="result-box">
+                
+            </div>
+            </div>
+            
+           
+            
+        </div>
+         <span class="collapsible-bar"><i id="bar" class="fa-solid fa-bars"></i></span>
+        <div class="cart-account">
+            <div class="cart">
+                <img src="img/cart img.png" alt="">
+                <span class="quantity">0</span>
+                
+            </div>
+            <div  class="account">
+                <div onclick="hideShow()" class="account-sbox">
+                    <i class="fa-solid fa-user"></i>
+                <h2>Account</h2>
+                <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                
+                <div class="no-account">
+                   <div class="account-box">
+                    <p>Enter your email adress</p>
+                    <input type="text" placeholder="Enter your email adress">
+                   </div>
+                   <div class="account-box">
+                    <p>Password</p>
+                    <input type="text" placeholder="Password">
+                   </div>
+                   <button>Login</button>
+                   <div>
+                    <a href="#">Recover Password</a>
+                   </div>
+                   <div>
+                    <a href="#">Register</a>
+                   </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </nav>  
+    </div>
+   
+    <header id="header">
+
+            <ul class="slide-opt">
+                <li class="option"><a href="Phones and tablets.html">Phones</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tablets.html">Tablets</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="laptop.html">Laptops/Pc</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="gaming.html">Gaming, Games</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tv.html">Tv</a><i class="fa-solid fa-chevron-right"></i></li>
+            <span class="close-icon"><i id="close-icon" class="fa-solid fa-chevron-right"></i></span>
+            </ul>
+        
+        <div class="products-bar">
+            <div onclick="optionShowHide()" class="select-menu">
+                <div class="select-btn">
+                <span class="sBtn-text"><i class="fa-solid fa-bars"></i> Products</span>
+            </div>
+            <ul class="options">
+                <li class="option"><a href="Phones and tablets.html">Phones</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tablets.html">Tablets</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="laptop.html">Laptops/Pc</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="gaming.html">Gaming, Games</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tv.html">Tv</a><i class="fa-solid fa-chevron-right"></i></li>
+            </ul>
+            </div>
+            
+            <div class="bar-option">
+                <h2><a href="gifts.html">Promotions</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="finance.html">Finance</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="customersupport.html">Customer Support</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="stores.html">Stores</a></h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-bbox">
+
+
+        <h1 class="product-info-text">
+            Laptop HP 15-fc0, AMD Ryzen 3 7320U up to 4.1GHz, 8GB, SSD 512GB, AMD Radeon Graphics
+        </h1>
+
+        <div class="product-stars">
+           <i class="fa-solid fa-star" id="colored-star"></i>
+           <i class="fa-solid fa-star" id="colored-star"></i>
+           <i class="fa-solid fa-star" id="colored-star"></i>
+           <i class="fa-solid fa-star" id="colored-star"></i>
+           <i class="fa-regular fa-star"></i>
+           <p class="stars-text">
+            4 out of 5(100 Reviews)
+           </p>
+        </div>
+<div class="product-sbox">
+<div class="product-box">
+            <div class="product-images">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="img/hp 15 2.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img/hp 15 3.jpg" alt=""></div>
+                      <div class="swiper-box">
+                        <button class="swiperBtn" onclick="alert('You need an account first')"><i class="fa-regular fa-heart"></i></button>
+                        <button class="swiperBtn" onclick="alert('You need an account first')"><i class="fa-regular fa-floppy-disk"></i></button>
+                      </div>
+                    </div>
+                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+            <div class="product-info">
+                <div class="price-box">
+                    <div class="prp-box">
+                        <h2>PRP:$9000</h2>
+                        <p><i class="fa-solid fa-barcode"></i> in stock</p>
+                    </div>
+                    
+                    <h1>$445.50</h1>
+                    <span><img src="img/delivery img.jpg" alt="">Free delivery in Europe</span>
+                </div>
+                <div class="buy-now">
+                    <button>Buy Now</button>
+                </div>
+                <div class="storage-box">
+                    <h2>Storage capacity: <span class="change-txt">256GB</span></h2>
+                    <button onclick="changeBtnText()" class="btn-change1">256GB</button>
+                    <button onclick="changeBtnText2()" class="btn-change2">512GB</button>
+                    <button onclick="changeBtnText3()" class="btn-change3">1TB</button>
+                </div>
+                <div class="services-box">
+                        <h2>Add extra guarantee <i class="fa-solid fa-info"></i></h2>
+                        <div class="extra-box">
+                            <input type="checkbox">
+                            <p>1 year - $109.99</p>
+                        </div>
+                        <div class="extra-box">
+                            <input type="checkbox">
+                            <p>2 years - $199.99</p>
+                        </div>
+                        <h2 class="mobile-protect">
+                            Add Laptop protect <i class="fa-solid fa-info"></i>
+                        </h2>
+                        <div class="extra-box">
+                            <input type="checkbox">
+                            <p>2 years - $199.99</p>
+                            <input type="checkbox" class="mob-pro">
+                            <p>2 years - $199.99</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+        
+
+    </div>
+
+    <div class="collap-bar">
+        <ul class="accordion pp">
+            <li class="pro-page">
+                <input type="radio" name="accordion" id="first" >
+                <label class="collap-text" for="first">Description</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officia delectus? Minus, quia maxime repellendus quis laboriosam placeat dignissimos provident sit veritatis debitis minima possimus atque, quam asperiores assumenda, praesentium sunt quibusdam. Accusantium dolorem cumque fugit atque nisi eveniet ea, est suscipit quas molestiae nemo aliquid magnam possimus natus eligendi amet blanditiis deserunt ad perspiciatis id voluptatem distinctio? Incidunt qui beatae voluptatem quasi odio veniam illum necessitatibus fugit nemo, ratione cupiditate voluptates error? Numquam facere saepe quae eveniet, eius aperiam illo, recusandae ipsam distinctio qui velit laboriosam tenetur, vel deleniti consectetur rem maiores doloribus magni voluptate libero. Illo aspernatur, odio esse ipsa, dolorum omnis officia cupiditate quia cum rerum ut quibusdam ratione eius non unde necessitatibus rem. Repellat ad doloremque rerum illo similique sint dolore repellendus quaerat animi. Odio assumenda blanditiis, quo, repellat necessitatibus, nam doloribus impedit quos aliquid ex accusamus iure atque tempora doloremque consequuntur. Ratione, reiciendis error? Reprehenderit, eos iusto nam dicta non sed molestiae incidunt mollitia et? Explicabo voluptate numquam dolorum quia voluptatum ipsam unde nihil facere aperiam deserunt saepe tempore, consectetur rem reiciendis libero. Alias minus, quaerat suscipit inventore vero ex architecto nisi mollitia non consectetur rem reprehenderit ipsum in consequuntur dolorem placeat distinctio deleniti commodi ipsa repellat animi dolorum blanditiis voluptatibus! Eveniet deleniti necessitatibus, ut autem, porro perspiciatis iure ea commodi cupiditate esse aut, dolorem blanditiis. Reprehenderit exercitationem recusandae saepe, molestias asperiores assumenda non, optio excepturi voluptas impedit eos debitis sapiente consequuntur mollitia vitae ea maiores voluptatem dolorum porro! Nostrum debitis aliquid veritatis repellat asperiores. Quia quisquam, id quidem inventore, doloremque soluta, laboriosam autem odit sed vel libero. Doloremque recusandae aliquid corporis rem et, hic aperiam ad, magnam ipsa eligendi velit pariatur soluta nisi? Quibusdam illum iste quaerat doloribus, ab est qui deleniti, enim dolor repellat placeat animi aliquam maxime sunt officiis et. Eius, ratione.</p>
+                    
+                    </div>
+            </li>
+            <li class="pro-page">
+                <input type="radio" name="accordion" id="secound">
+                <label  class="collap-text" for="secound">Specification</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aspernatur officiis! Voluptatem beatae ad exercitationem repellendus enim sint dicta, aut, nisi cupiditate neque eaque facere fugit facilis illum, suscipit magni placeat accusantium magnam eum quaerat laborum itaque autem non. Ullam temporibus corrupti quod facilis repellat doloremque voluptatum autem non excepturi fuga dolore cumque, iure minima quo quae ducimus eos harum? Voluptates earum quia fuga voluptatum id doloribus, a mollitia. Recusandae tenetur quam quisquam suscipit ipsam explicabo. Quidem dolor expedita nisi pariatur nostrum deserunt perferendis aliquid! Placeat sequi nostrum maiores quae quibusdam? Quidem quod eaque architecto porro magni veritatis, asperiores corrupti animi beatae maxime autem nulla, impedit qui nihil fugiat incidunt! Pariatur sequi eum sed ad delectus. Iure voluptatum cum iste fugiat molestias ipsum dolor qui nam maxime! Nihil architecto et maiores soluta porro deserunt delectus praesentium aspernatur repellat. Ipsa odio tempore quae debitis doloremque inventore necessitatibus nam doloribus ea ad maxime totam nulla, suscipit delectus! Voluptates asperiores provident iusto officiis consectetur at magnam, accusantium alias ducimus? Cumque consectetur incidunt laborum quis obcaecati iste dolores tenetur fugit ipsa culpa, sunt molestias dignissimos deserunt. Deserunt culpa a, suscipit quas velit excepturi perferendis inventore, illo quae sunt asperiores tenetur sequi labore maiores nobis repudiandae voluptate cum facere. A reiciendis quidem illo eius. Ex quod et, dolor, numquam animi dignissimos porro incidunt, cupiditate enim voluptates eveniet non labore velit deleniti ipsum pariatur nesciunt harum iusto esse rem illum! Fuga magnam, iusto nisi quo eaque iste ullam similique ea unde nemo aspernatur, consequatur quas nostrum! Molestias quaerat iste ipsum maxime fuga voluptatibus quia ea adipisci aspernatur reprehenderit similique et consectetur quas alias impedit ad laudantium, totam, dicta nemo commodi culpa excepturi praesentium ullam aperiam! Laboriosam quaerat alias aut reiciendis harum soluta perspiciatis! Nobis suscipit fugiat recusandae ad. Earum harum iusto reiciendis! Reprehenderit quisquam assumenda voluptate?</p>
+                    
+                </div>
+            </li>
+            <li class="pro-page">
+                <input type="radio" name="accordion" id="third">
+                <label class="collap-text" for="third">Reviews</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorem, quo fugit numquam eveniet aut harum nesciunt perspiciatis vel temporibus at mollitia minima voluptate minus blanditiis nihil autem explicabo, voluptas quam quibusdam laborum dignissimos eaque! Quis laudantium rem dolorem, ex voluptatum ipsa consequuntur dolore voluptas accusantium reiciendis. Quaerat iure ducimus totam rem quam exercitationem, accusantium veniam delectus. Dicta, odio architecto quidem earum corporis, porro cum temporibus dolorum aliquid deleniti minus, reprehenderit harum eligendi ullam placeat non nihil reiciendis eaque amet. Voluptatem, nam deleniti illo recusandae exercitationem consequuntur ad, ipsam quisquam dolorum rerum libero. Cumque nostrum, ea blanditiis facere sed officia non maiores rem nam laboriosam? In illum laborum ea cupiditate illo nulla delectus, doloribus unde dolor ad consectetur quia minus omnis, nobis placeat! Delectus provident quas excepturi ipsam ut culpa sed, labore dolorem qui ducimus ullam aspernatur natus aliquid, cumque nulla quibusdam omnis dignissimos dolores numquam? Nesciunt enim voluptas similique quam, ut accusantium veniam, architecto in magnam, iusto nulla laudantium adipisci dicta. Dolorem vero soluta eos iste voluptatum magni, numquam, omnis tempore ipsa saepe, esse dolor voluptas! Unde, exercitationem? Ad aut inventore possimus neque esse nulla deleniti numquam amet suscipit, totam voluptates harum provident minus eligendi voluptas eveniet repellat, obcaecati in aliquam libero dolorem consequuntur quaerat. Ex corrupti aut voluptatem non nam repudiandae deleniti blanditiis expedita modi! Quo delectus minus deserunt, asperiores voluptates dolorem nemo laboriosam quod odio id? Perferendis incidunt impedit aspernatur. Pariatur incidunt harum laborum impedit vitae enim facere aliquid odio. Provident, explicabo commodi quidem quas sunt delectus quos quibusdam numquam enim veritatis obcaecati rem, aperiam cumque, corrupti voluptatem neque quisquam nulla itaque! Assumenda doloribus tempora quas quasi molestiae quibusdam possimus id nobis sapiente qui temporibus, perspiciatis perferendis exercitationem dolorum consectetur ex voluptatem vel corrupti officia numquam maiores tempore a? Deleniti animi totam error repudiandae, dolorum nam quisquam!</p>
+                </div>
+            </li>    
+        </ul>
+    </div>
+
+    <div class="similar-bar">
+       
+       <div class="more-products">
+
+
+        <div class="slider-box">
+             <h2 class="similar-text">More Products</h2>
+            <button class="heartBtn" onclick="alert('You need an account first')"><i class="fa-regular fa-heart"></i></button>
+            <a href="iphone 11 pp.html"><img class="valueImg" src="img/iphone 11 11.jpg"></a>
+            <div class="slider-text">
+                <p class="value-name">Apple iphone 11 phone,64GB,Black</p>
+                <p class="in-stock"><i class="fa-solid fa-barcode"></i> in stock</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="price-cut">
+                    <h2>$1459.99</h2>
+                    <span>-23%</span>
+                </div>
+                <h2 class="actuall-price">
+                    $399.99
+                </h2>
+                <button onclick="window.location.href='iphone 11 pp.html'">Check Out Now</button>
+            </div>
+        </div>
+        <div class="slider-box">
+            <button class="heartBtn" onclick="alert('You need an account first')"><i class="fa-regular fa-heart"></i></button>
+            <a href="samsung s22 pp.html"><img class="valueImg" src="img/samsung s22 1.jpg"></a>
+            <div class="slider-text">
+                <p class="value-name">Phone SAMSUNG Galaxy S22 5G, 256GB, 8GB, RAM, Dual SIM, Phantom Black</p>
+                <p class="in-stock"><i class="fa-solid fa-barcode"></i> in stock</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="price-cut">
+                    <h2>$1459.99</h2>
+                    <span>-23%</span>
+                </div>
+                <h2 class="actuall-price">
+                   $594.99
+                </h2>
+                <button onclick="window.location.href='samsung s22 pp.html'">Check Out Now</button>
+            </div>
+        </div>
+        <div class="slider-box">
+            <button class="heartBtn" onclick="alert('You need an account first')"><i class="fa-regular fa-heart"></i></button>
+            <a href="oppo a78.html"><img class="valueImg" src="img/oppo a78 1.jpg"></a>
+            <div class="slider-text">
+                <p class="value-name">Phone OPPO A78 5G, 128GB, 4GB RAM, Dual SIM, Glowing Black</p>
+                <p class="in-stock"><i class="fa-solid fa-barcode"></i> in stock</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="price-cut">
+                    <h2>$1459.99</h2>
+                    <span>-23%</span>
+                </div>
+                <h2 class="actuall-price">
+                    $190.00
+                </h2>
+                <button onclick="window.location.href='oppo a78.html'">Check Out Now</button>
+            </div>
+        </div>
+        <div class="slider-box">
+            <button class="heartBtn" onclick="alert('You need an account first')"><i class="fa-regular fa-heart"></i></button>
+            <a href="samsung a54.html"><img class="valueImg" src="img/samsung a54 1.jpg"></a>
+            <div class="slider-text">
+                <p class="value-name">Phone SAMSUNG Galaxy A54 5G, 256GB, 8GB RAM, Dual SIM, Awesome Lime</p>
+                <p class="in-stock"><i class="fa-solid fa-barcode"></i> in stock</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-solid fa-star" id="colored-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="price-cut">
+                    <h2>$1459.99</h2>
+                    <span>-23%</span>
+                </div>
+                <h2 class="actuall-price">
+                    $490.00
+                </h2>
+                <button onclick="window.location.href='samsung a54.html'">Check Out Now</button>
+            </div>
+        </div>
+    
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h1>Your Cart</h1>
+        <ul class="listCard"></ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+       </div>
+
+<div class="footer-bar">
+    <img src="img/best-buy-icon.png">
+    <span>
+        <h2>The best price-quality ratio</h2>
+        <p>According to the Best Buy Award 2023/2024 survey conducted by the iCertias organization.</p>
+    </span>
+    <div class="download-icons">
+        <img class="google-play" src="img/google play.jpg" alt="">
+        <img class="app-store" src="img/app store.jpg" alt="">
+    </div>
+</div>
+       
+<footer>
+    <div class="footer-box">
+        <h2>About Tex</h2>
+        <p>About us</p>
+        <p>Marketplace</p>
+        <p>Careers</p>
+        <p>Products Categories</p>
+        <p>Tax free</p>
+    </div>
+    <div class="footer-box">
+        <h2>Clients Support</h2>
+        <p>Support articles</p>
+        <p>Contact</p>
+        <p>Return products</p>
+        <p>Complaints</p>
+    </div>
+    <div class="footer-box">
+        <h2>Legal information</h2>
+        <p>information about DEEE</p>
+        <p>Cookies policy</p>
+        <p>Terms and conditions</p>
+        <p>A.N.P.C.</p>
+    </div>
+    <div class="footer-box contact">
+        <h2>Contact</h2>
+        <p>Phone: [123]-456-789</p>
+        <p>Contact Form</p>
+    </div>
+    <div class="footer-box communication">
+        <h2>Communication</h2>
+        <p>Subscribe to newsletter</p>
+    </div>
+    <div class="footer-box">
+        <h2>Follow-us</h2>
+        <span>
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-x-twitter"></i></div>
+            <div><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><i class="fa-brands fa-youtube"></i></div>
+        </span>
+            
+    </div>
+</footer>
+
+<script src="swiper-bundle js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/5111c4ecb9.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

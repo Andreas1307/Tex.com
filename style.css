@@ -1,0 +1,5763 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    width: 100%;
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #999;
+}
+nav {
+    min-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo-search {
+    display: flex;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.result-box {
+    position: absolute;
+    top: 135%;
+    height: 300px;
+    width: 700px;
+    background-color: #fff;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 2px solid #999;
+    overflow: auto;
+    visibility: hidden;
+}
+.result-box .search-item {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.result-box img {
+    width: 60px;
+    margin-right: 10px;
+}
+.result-box .search-item h6 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+}
+.result-box .search-item h6:hover {
+    text-decoration: none;
+    color: #c00033;
+}
+.result-box .search-item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    transition: .3s ease-in-out;
+}
+.result-box a:hover {
+    background-color: #dfdfdf;   
+}
+.result-box a:hover li {
+    text-decoration: underline;
+}
+.result-box ul li {
+    list-style: none;
+    border-radius: 3px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.result-box ul  a {
+    color: #6a6a6a;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+}
+
+nav .logo-search .logo {
+    font-family: 'Rubik Doodle Shadow';
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: 30px;
+    color: #000;
+}
+nav .logo-search .search-bar {
+    display: flex;
+    border: 2px solid #999;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 60px;
+    padding: 0 10px;
+}
+nav .logo-search .search-bar input {
+    width: 370px;
+    height: 100%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+nav .logo-search .search-bar input::placeholder {
+    font-size: 15px;
+    font-weight: 600;
+}
+nav .logo-search .search-bar i {
+    font-size: 20px;
+    color: #999;
+    margin-top: 17px;
+}
+nav .cart-account {
+    display: flex;
+}
+nav .cart-account .cart {
+    display: flex;
+    margin: 0 30px;
+    margin-top: 9px;
+    cursor: pointer;
+}
+nav .cart-account .cart img {
+    width: 55px;
+    margin-right: 5px;
+}
+nav .cart-account .cart span  {
+    font-weight: 700;
+    margin-left: -20px;
+    margin-top: 22px;
+    z-index: -1;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .cart-account .account {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+nav .cart-account .account .account-sbox {
+    display: flex;
+    margin-top: 10px;
+}
+nav .cart-account .account .no-account {
+    position: absolute;
+    display: none;
+    width: 280px;
+    height: 350px;
+    bottom: -380px;
+    padding: 20px;
+    left: -10px;
+    background-color: #fff;
+    border: 1px solid #282828;
+    z-index: 100;
+}
+nav .cart-account .account .no-account.logIN {
+    display: block;
+}
+
+nav .cart-account .account .account-sbox .fa-solid.fa-chevron-down {
+    margin-top: 13.5px;
+}
+nav .back-to {
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 5px;
+    color: #000;
+}
+nav .cart-account .account .no-account .account-box {
+    width: 100%;
+    margin-top: 15px;
+
+}
+nav .cart-account .account .no-account .account-box p {
+    font-size: 14px; 
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+nav .cart-account .account .no-account .account-box input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #999;
+    outline: 0;
+    padding: 0 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+nav .cart-account .account .no-account a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #c00033;
+    transition: .2s ease-in-out;
+}
+nav .cart-account .account .no-account a:hover {
+    color: blue;
+}
+nav .cart-account .account .no-account button {
+    width: 100%;
+    height: 45px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 0;
+    outline: 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    background-color: #fccb38;
+}
+nav .cart-account .account .no-account::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    z-index: 100;
+    transform: rotate(45deg);
+    top: -8px;
+    left: 80px;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    background-color: #fff;
+}
+.nav .cart-account .account .no-account .small-box {
+    width: 114px;
+    height: 114px;
+    background-color: #000;
+}
+/*nav .cart-account .account::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    bottom: -37px;
+    left: 13px;
+    background-color: #000;
+    transform: rotate(45deg);
+}*/
+nav .cart-account .account .fa-user {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+nav .cart-account .account h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+nav .cart-account .account .fa-chevron-down {
+    margin-top: 10px;
+    margin-left: 6px;
+}
+.row {
+    display: flex;
+}
+header {
+    width: 100%;
+    height: 6.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c00033;
+}
+header .products-bar {
+    min-width: 70%;
+    display: flex;
+    align-items: center;
+}
+header .products-bar .bar-option h2 {
+    display: flex;
+    padding: 12px 30px 12px 25px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+}
+header .products-bar .bar-option h2 a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+header .products-bar .select-menu {
+    max-width: 300px;
+}
+
+header .products-bar .select-menu .select-btn {
+    display: flex;
+    padding: 12px 30px 12px 25px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+}
+header .products-bar .select-menu .select-btn i {
+    margin-right: 6px;
+}
+header .products-bar .select-menu .options {
+    position: absolute;
+    top: 165px;
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: -15px;
+    z-index: 200;
+}
+header .products-bar .select-menu:hover .options {
+    display: block;
+}
+header .products-bar .select-menu .options::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 40px;
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+    background-color: #c00033;
+}
+header .products-bar .select-menu .options .option {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding: 30px 70px 30px 20px;
+    cursor: pointer;
+    position: relative;
+    background: #c00033;
+}
+header .products-bar .select-menu .options .option a:hover{
+    text-decoration: underline;
+}
+header .products-bar .select-menu .options .option a {
+    text-decoration: none;
+    color: #fff;
+}
+header .products-bar .select-menu .options .option i {
+    position: absolute;
+    right: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+.home-page {
+    max-width: 70%;
+    height: 37vh;
+}
+.home-page .swiper-button-next,
+.home-page .swiper-button-prev,
+.home-page .swiper-pagination {
+    color: #fccb38;
+    font-weight: 900; 
+}
+.home-page .home-page-pictures {
+    width: 100%;
+    height: 100%;
+}
+.home-page-pictures .picture-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #c00033;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.home-page-pictures .picture-box .text-side {
+    background-color: #c00033;
+    width: 45%;
+    position: relative;
+    padding: 0 40px;
+    padding-right: 0;
+    margin-left: 20px;
+    z-index: 100;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-page-pictures .picture-box .text-side h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fccb38;
+    margin: 0px 10px 15px;
+}
+.home-page-pictures .picture-box .text-side h3 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fccb38;
+    margin: 0px 10px 15px;
+}
+.home-page-pictures .picture-box .text-side p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0px 10px 10px;
+}
+.home-page-pictures .picture-box .text-side h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 10px;
+    line-height: 45px;
+}
+.home-page-pictures .picture-box .text-side h2 span {
+    color: #fccb38;
+}
+.home-page-pictures .picture-box .img-side {
+    display: flex;
+    align-items: right;
+}
+.home-page-pictures .picture-box .img-side img {
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 1;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 40%;
+}
+.home-page-icons {
+    display: flex;
+    max-width: 70%;
+}
+.home-page-icons .icon-box {
+    margin: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.home-page-icons .icon-box p {
+    margin-top: 10px;
+    color: #444;
+    padding: 0 20px;
+    max-width: 300px;
+}
+.home-page-icons .icon-box .icon-text {
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+    margin-bottom: -20px;
+}
+#colored-star {
+    color: #fccb38;
+}
+.top-offers {
+    max-width: 70%;
+    margin-top: 5%;
+    transition: 0.5s ease;
+}
+.offers-top {
+    font-size: 35px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.slider-offers {
+    max-width: 70%;
+    margin-top: 5%;
+    position: relative;
+}
+.slider-offers .promo-text {
+    position: absolute;
+    top: -50px;
+    left: 35px;
+    font-size: 33px;
+    font-weight: 400;
+}
+ .slider,
+ .slider-2,
+ .slider-opt1,
+ .slider-opt2,
+ .slider-offers,
+ .main-products1,
+ .main-products2,
+ .main-products3,
+ .more-products,
+ .main-products4{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .main-under21,
+ .main-under22,
+ .main-between200,
+ .main-between2001,
+ .main-between58,
+ .main-between581,
+ .main-over1000,
+ .main-over10001,
+ .main-12gb,
+ .main-8gb,
+ .main-81gb,
+ .main-6gb,
+ .main-61gb,
+ .main-tablet1,
+ .main-tablet2,
+ .main-tablet3,
+ .main-tabletUnder1,
+ .main-tabletBetween1,
+ .main-tabletBetween2,
+ .main-tabletOver,
+ .main-tablet32gb,
+ .main-tablet64gb,
+ .main-tablet641gb,
+ .main-laptop1,
+ .main-laptop2,
+ .main-laptop3,
+ .main-laptopUnder,
+ .main-laptopOver,
+ .main-laptopIntelcore,
+ .main-laptopIntelcore2,
+ .main-laptopAmdryzen,
+ .main-laptopBetween,
+ .main-Gaming1,
+ .main-Gaming2,
+ .main-Gaming3,
+ .main-GamingUnder1,
+ .main-GamingUnder2,
+ .main-GamingOver,
+ .main-GamingConsole1,
+ .main-GamingConsole2,
+ .main-GamingAccessories1,
+ .main-GamingAccessories2,
+ .main-GamingBetween,
+ .main-tv1,
+ .main-tv2,
+ .main-tvUnder,
+ .main-tvSmart,
+ .main-tvSmart2,
+ .main-tvOver,
+ .main-tvNormal,
+ .more-products,
+ .main-tvBetween,
+ .main-plaptop1,
+ .main-pbetween200,
+ .main-ptablet2,
+ .main-p8gb,
+ .main-pGamingAccessories1
+  {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+ }
+
+
+
+ .slider .slider-box,
+ .slider-2 .slider-box,
+ .slider-opt1 .slider-box,
+ .slider-opt3 .slider-box,
+ .slider-opt2 .slider-box,
+ .slider-opt4 .slider-box,
+ .slider-opt5 .slider-box,
+ .slider-offers .slider-box,
+ .main-products1 .slider-box,
+ .main-products2 .slider-box,
+ .main-products3 .slider-box,
+ .main-products4 .slider-box,
+ .main-under21 .slider-box,
+ .main-under22 .slider-box,
+ .main-between200 .slider-box,
+ .main-between2001 .slider-box,
+ .main-between58 .slider-box,
+ .main-between581 .slider-box,
+ .main-over1000 .slider-box,
+ .main-over10001 .slider-box,
+ .main-12gb .slider-box,
+ .main-8gb .slider-box,
+ .main-81gb .slider-box,
+ .main-6gb .slider-box,
+ .main-61gb .slider-box,
+ .main-tablet1 .slider-box,
+ .main-tablet2 .slider-box,
+ .main-tablet3 .slider-box,
+ .main-tabletUnder1 .slider-box,
+ .main-tabletBetween1 .slider-box,
+ .main-tabletBetween2 .slider-box,
+ .main-tabletOver .slider-box,
+ .main-tablet32gb .slider-box,
+ .main-tablet64gb .slider-box,
+ .main-tablet641gb .slider-box,
+ .main-laptop1 .slider-box,
+ .main-laptop2 .slider-box,
+ .main-laptop3 .slider-box,
+ .main-laptopUnder .slider-box,
+ .main-laptopOver .slider-box,
+ .main-laptopIntelcore .slider-box,
+ .main-laptopIntelcore2 .slider-box,
+ .main-laptopAmdryzen .slider-box,
+ .main-Gaming1 .slider-box,
+ .main-Gaming2 .slider-box,
+ .main-Gaming3 .slider-box,
+ .main-GamingUnder1 .slider-box,
+ .main-GamingUnder2 .slider-box,
+ .main-GamingOver .slider-box,
+ .main-GamingBetween .slider-box,
+ .main-GamingConsole1 .slider-box,
+ .main-GamingConsole2 .slider-box,
+ .main-GamingAccessories1 .slider-box,
+ .main-GamingAccessories2 .slider-box,
+ .main-laptopBetween .slider-box,
+ .main-tv1 .slider-box,
+ .main-tv2 .slider-box,
+ .main-tvUnder .slider-box,
+ .main-tvSmart .slider-box,
+ .main-tvSmart2 .slider-box,
+ .main-tvOver .slider-box,
+ .main-tvNormal .slider-box,
+ .main-tvBetween .slider-box,
+ .more-products .slider-box,
+ .main-GamingBetween9 .slider-box,
+ .main-plaptop1 .slider-box,
+ .main-pbetween200 .slider-box,
+ .main-ptablet2 .slider-box,
+ .main-p8gb .slider-box,
+ .main-pGamingAccessories1 .slider-box
+ {
+    width: 251px;
+    height: 468px;
+    margin: 20px;
+    border: 1px solid #999;
+    position: relative;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.slider .slider-box .slider-text,
+.slider-2 .slider-box .slider-text,
+.slider-opt1 .slider-box .slider-text,
+.slider-opt2 .slider-box .slider-text,
+.slider-opt3 .slider-box .slider-text,
+.slider-opt4 .slider-box .slider-text,
+.slider-opt5 .slider-box .slider-text,
+.slider-offers .slider-box .slider-text,
+.main-products1 .slider-box .slider-text,
+.main-products2 .slider-box .slider-text,
+.main-products3 .slider-box .slider-text,
+.main-products4 .slider-box .slider-text,
+.main-under21 .slider-box .slider-text,
+.main-under22 .slider-box .slider-text,
+.main-between200 .slider-box .slider-text,
+.main-between2001 .slider-box .slider-text,
+.main-between58 .slider-box .slider-text,
+.main-between581 .slider-box .slider-text,
+.main-over1000 .slider-box .slider-text,
+.main-over10001 .slider-box .slider-text,
+.main-12gb .slider-box .slider-text,
+.main-8gb .slider-box .slider-text,
+.main-81gb .slider-box .slider-text,
+.main-6gb .slider-box .slider-text,
+.main-61gb .slider-box .slider-text,
+.main-tablet1 .slider-box .slider-text,
+.main-tablet2 .slider-box .slider-text,
+.main-tablet3 .slider-box .slider-text,
+.main-tabletUnder1 .slider-box .slider-text,
+.main-tabletBetween1 .slider-box .slider-text,
+.main-tabletBetween2 .slider-box .slider-text,
+.main-tabletOver .slider-box .slider-text,
+.main-tablet32gb .slider-box .slider-text,
+.main-tablet64gb .slider-box .slider-text,
+.main-tablet641gb .slider-box .slider-text,
+.main-laptop1 .slider-box .slider-text,
+.main-laptop2 .slider-box .slider-text,
+.main-laptop3 .slider-box .slider-text,
+.main-laptopUnder .slider-box .slider-text,
+.main-laptopOver .slider-box .slider-text,
+.main-laptopIntelcore .slider-box .slider-text,
+.main-laptopIntelcore2 .slider-box .slider-text,
+.main-laptopAmdryzen .slider-box .slider-text,
+.main-laptopBetween .slider-box .slider-text,
+.main-laptopBetween .slider-box .slider-text,
+.main-Gaming1 .slider-box .slider-text,
+.main-Gaming2 .slider-box .slider-text,
+.main-Gaming3 .slider-box .slider-text,
+.main-GamingUnder1 .slider-box .slider-text,
+.main-GamingUnder2 .slider-box .slider-text,
+.main-GamingOver .slider-box .slider-text,
+.main-GamingConsole1 .slider-box .slider-text,
+.main-GamingConsole2 .slider-box .slider-text,
+.main-GamingAccessories2 .slider-box .slider-text,
+.main-GamingAccessories1 .slider-box .slider-text,
+.main-GamingBetween .slider-box .slider-text,
+.main-tv1 .slider-box .slider-text,
+.main-tv2 .slider-box .slider-text,
+.main-tvUnder .slider-box .slider-text,
+.main-tvSmart .slider-box .slider-text,
+.main-tvSmart2 .slider-box .slider-text,
+.main-tvOver .slider-box .slider-text,
+.main-tvNormal .slider-box .slider-text,
+.more-products .slider-box .slider-text,
+.main-tvBetween .slider-box .slider-text,
+.main-plaptop1 .slider-box .slider-text,
+.main-pbetween200 .slider-box .slider-text,
+.main-ptablet2 .slider-box .slider-text,
+.main-p8gb .slider-box .slider-text,
+.main-pGamingAccessories1 .slider-box .slider-text
+{
+    position: absolute;
+    bottom: 0;
+    height: 47%;
+    width: 90%;
+}
+ .slider .item .heartBtn,
+ .slider-2 .item .heartBtn,
+ .slider-opt1 .item .heartBtn,
+ .slider-opt2 .item .heartBtn,
+ .slider-opt3 .item .heartBtn,
+ .slider-opt4 .item .heartBtn,
+ .slider-opt5 .item .heartBtn,
+ .slider-offers .item .heartBtn,
+ .main-products1 .item .heartBtn,
+ .main-products2 .item .heartBtn,
+ .main-products3 .item .heartBtn,
+ .main-products4 .item .heartBtn,
+ .main-under21 .item .heartBtn,
+ .main-under22 .item .heartBtn,
+ .main-between200 .item .heartBtn,
+ .main-between2001 .item .heartBtn,
+ .main-between58 .item .heartBtn,
+ .main-between581 .item .heartBtn,
+ .main-over1000 .item .heartBtn,
+ .main-over10001 .item .heartBtn,
+ .main-12gb .item .heartBtn,
+ .main-8gb .item .heartBtn,
+ .main-81gb .item .heartBtn,
+ .main-6gb .item .heartBtn,
+ .main-61gb .item .heartBtn,
+ .main-tablet1 .item .heartBtn,
+ .main-tablet2 .item .heartBtn,
+ .main-tablet3 .item .heartBtn,
+ .main-tabletUnder1 .item .heartBtn,
+ .main-tabletBetween1 .item .heartBtn,
+ .main-tabletBetween2 .item .heartBtn,
+ .main-tabletOver .item .heartBtn,
+ .main-tablet32gb .item .heartBtn,
+ .main-tablet64gb .item .heartBtn,
+ .main-tablet641gb .item .heartBtn,
+ .main-laptop1 .item .heartBtn,
+ .main-laptop2 .item .heartBtn,
+ .main-laptop3 .item .heartBtn,
+ .main-laptopUnder .item .heartBtn,
+ .main-laptopOver .item .heartBtn,
+ .main-laptopIntelcore .item .heartBtn,
+ .main-laptopIntelcore2 .item .heartBtn,
+ .main-laptopAmdryzen .item .heartBtn,
+ .main-laptopBetween .item .heartBtn,
+ .main-Gaming1 .item .heartBtn,
+ .main-Gaming2 .item .heartBtn,
+ .main-Gaming3 .item .heartBtn,
+ .main-GamingUnder1 .item .heartBtn,
+ .main-GamingUnder2 .item .heartBtn,
+ .main-GamingOver .item .heartBtn,
+ .main-GamingConsole1 .item .heartBtn,
+ .main-GamingConsole2 .item .heartBtn,
+ .main-GamingAccessories1 .item .heartBtn,
+ .main-GamingAccessories2 .item .heartBtn,
+ .main-GamingBetween .item .heartBtn,
+ .main-tv1 .item .heartBtn,
+ .main-tv2 .item .heartBtn,
+ .main-tvUnder .item .heartBtn,
+ .main-tvSmart .item .heartBtn,
+ .main-tvSmart2 .item .heartBtn,
+ .main-tvOver .item .heartBtn,
+ .main-tvNormal .item .heartBtn,
+ .more-products .heartBtn,
+ .main-tvBetween .item .heartBtn,
+ .main-plaptop1 .item .heartBtn,
+ .main-pbetween200 .item .heartBtn,
+ .main-ptablet2 .item .heartBtn,
+ .main-p8gb .item .heartBtn,
+ .main-pGamingAccessories1 .item .heartBtn
+ {
+    width: 40px;
+    height: 40px;
+    display: flex;
+   justify-content: center;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    font-size: 15px;
+    padding-top: 14px;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: -4px;
+    top: -2px;
+    cursor: pointer;
+}
+ .slider .item .heartBtn:hover,
+ .slider-2 .item .heartBtn:hover,
+ .slider-opt1 .item .heartBtn:hover,
+ .slider-opt2 .item .heartBtn:hover,
+ .slider-opt3 .item .heartBtn:hover,
+ .slider-opt4 .item .heartBtn:hover,
+ .slider-opt5 .item .heartBtn:hover,
+ .slider-offers .item .heartBtn:hover,
+ .main-products1 .item .heartBtn:hover,
+ .main-products2 .item .heartBtn:hover,
+ .main-products3 .item .heartBtn:hover,
+ .main-products4 .item .heartBtn:hover,
+ .main-under21 .item .heartBtn:hover,
+ .main-under22 .item .heartBtn:hover,
+ .main-between200 .item .heartBtn:hover,
+ .main-between2001 .item .heartBtn:hover,
+ .main-between58 .item .heartBtn:hover,
+ .main-between581 .item .heartBtn:hover,
+ .main-over1000 .item .heartBtn:hover,
+ .main-over10001 .item .heartBtn:hover,
+ .main-12gb .item .heartBtn:hover,
+ .main-8gb .item .heartBtn:hover,
+ .main-81gb .item .heartBtn:hover,
+ .main-6gb .item .heartBtn:hover,
+ .main-61gb .item .heartBtn:hover,
+ .main-tablet1 .item .heartBtn:hover,
+ .main-tablet2 .item .heartBtn:hover,
+ .main-tablet3 .item .heartBtn:hover,
+ .main-tabletUnder1 .item .heartBtn:hover,
+ .main-tabletBetween2 .item .heartBtn:hover,
+ .main-tabletBetween1 .item .heartBtn:hover,
+ .main-tabletOver .item .heartBtn:hover,
+ .main-tablet32gb .item .heartBtn:hover,
+ .main-tablet64gb .item .heartBtn:hover,
+ .main-tablet641gb .item .heartBtn:hover,
+ .main-laptop1 .item .heartBtn:hover,
+ .main-laptop2 .item .heartBtn:hover,
+ .main-laptop3 .item .heartBtn:hover,
+ .main-laptopUnder .item .heartBtn:hover,
+ .main-laptopOver .item .heartBtn:hover,
+ .main-laptopIntelcore .item .heartBtn:hover,
+ .main-laptopIntelcore2 .item .heartBtn:hover,
+ .main-laptopAmdryzen .item .heartBtn:hover,
+ .main-laptopBetween .item .heartBtn:hover,
+ .main-Gaming1 .item .heartBtn:hover,
+ .main-Gaming2 .item .heartBtn:hover,
+ .main-Gaming3 .item .heartBtn:hover,
+ .main-GamingUnder1 .item .heartBtn:hover,
+ .main-GamingUnder2 .item .heartBtn:hover,
+ .main-GamingOver .item .heartBtn:hover,
+ .main-GamingConsole1 .item .heartBtn:hover,
+ .main-GamingConsole2 .item .heartBtn:hover,
+ .main-GamingAccessories1 .item .heartBtn:hover,
+ .main-GamingAccessories2 .item .heartBtn:hover,
+ .main-GamingBetween .item .heartBtn:hover,
+ .main-tv1 .item .heartBtn:hover,
+ .main-tv2 .item .heartBtn:hover,
+ .main-tvUnder .item .heartBtn:hover,
+ .main-tvSmart .item .heartBtn:hover,
+ .main-tvSmart2 .item .heartBtn:hover,
+ .main-tvOver .item .heartBtn:hover,
+ .main-tvNormal .item .heartBtn:hover,
+ .more-products .heartBtn:hover,
+ .main-tvBetween .item .heartBtn:hover,
+ .main-plaptop1 .item .heartBtn:hover,
+ .main-pbetween200 .item .heartBtn:hover,
+ .main-ptablet2 .item .heartBtn:hover,
+ .main-p8gb .item .heartBtn:hover,
+ .main-pGamingAccessories1 .item .heartBtn:hover
+ {
+    background-color: #999;
+}
+ .slider .item .valueImg,
+ .slider-2 .item .valueImg,
+ .slider-opt1 .item .valueImg,
+ .slider-opt2 .item .valueImg,
+ .slider-opt3 .item .valueImg,
+ .slider-opt4 .item .valueImg,
+ .slider-opt5 .item .valueImg,
+ .slider-offers .item .valueImg,
+ .main-products1 .item .valueImg,
+ .main-products2 .item .valueImg,
+ .main-products3 .item .valueImg,
+ .main-products4 .item .valueImg,
+ .main-under21 .item .valueImg,
+ .main-under22 .item .valueImg,
+ .main-between200 .item .valueImg,
+ .main-between2001 .item .valueImg,
+ .main-between58 .item .valueImg,
+ .main-between581 .item .valueImg,
+ .main-over1000 .item .valueImg,
+ .main-over10001 .item .valueImg,
+ .main-12gb .item .valueImg,
+ .main-8gb .item .valueImg,
+ .main-81gb .item .valueImg,
+ .main-6gb .item .valueImg,
+ .main-61gb .item .valueImg,
+ .main-tablet1 .item .valueImg,
+ .main-tablet2 .item .valueImg,
+ .main-tablet3 .item .valueImg,
+ .main-tabletUnder1 .item .valueImg,
+ .main-tabletBetween1 .item .valueImg,
+ .main-tabletBetween2 .item .valueImg,
+ .main-tabletOver .item .valueImg,
+ .main-tablet32gb .item .valueImg,
+ .main-tablet64gb .item .valueImg,
+ .main-tablet641gb .item .valueImg,
+ .main-laptop1 .item .valueImg,
+ .main-laptop2 .item .valueImg,
+ .main-laptop3 .item .valueImg,
+ .main-laptopUnder .item .valueImg,
+ .main-laptopOver .item .valueImg,
+ .main-laptopIntelcore .item .valueImg,
+ .main-laptopIntelcore2 .item .valueImg,
+ .main-laptopAmdryzen .item .valueImg,
+ .main-laptopBetween .item .valueImg,
+ .main-Gaming1 .item .valueImg,
+ .main-Gaming2 .item .valueImg,
+ .main-Gaming3 .item .valueImg,
+ .main-GamingUnder1 .item .valueImg,
+ .main-GamingUnder2 .item .valueImg,
+ .main-GamingOver .item .valueImg,
+ .main-GamingConsole1 .item .valueImg,
+ .main-GamingConsole2 .item .valueImg,
+ .main-GamingAccessories1 .item .valueImg,
+ .main-GamingAccessories2 .item .valueImg,
+ .main-GamingBetween .item .valueImg,
+ .main-tv1 .item .valueImg,
+ .main-tv2 .item .valueImg,
+ .main-tvUnder .item .valueImg,
+ .main-tvSmart .item .valueImg,
+ .main-tvSmart2 .item .valueImg,
+ .main-tvOver .item .valueImg,
+ .main-tvNormal .item .valueImg,
+ .more-products .valueImg,
+ .main-tvBetween .item .valueImg,
+ .main-plaptop1 .item .valueImg,
+ .main-pbetween200 .item .valueImg,
+ .main-ptablet2 .item .valueImg,
+ .main-p8gb .item .valueImg,
+ .main-pGamingAccessories1 .item .valueImg
+ {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+ .slider .item p,
+ .slider-2 .item p,
+ .slider-opt1 .item p,
+ .slider-opt2 .item p,
+ .slider-opt3 .item p,
+ .slider-opt4 .item p,
+ .slider-opt5 .item p,
+ .slider-offers .item p,
+ .main-products1 .item p,
+ .main-products2 .item p,
+ .main-products3 .item p,
+ .main-products4 .item p,
+ .main-under21 .item p,
+ .main-under22 .item p,
+ .main-between200 .item p,
+ .main-between2001 .item p,
+ .main-between58 .item p,
+ .main-between581 .item p,
+ .main-over1000 .item p,
+ .main-over10001 .item p,
+ .main-12gb .item p,
+ .main-8gb .item p,
+ .main-81gb .item p,
+ .main-6gb .item p,
+ .main-61gb .item p,
+ .main-tablet1 .item p,
+ .main-tablet2 .item p,
+ .main-tablet3 .item p,
+ .main-tabletUnder1 .item p,
+ .main-tabletBetween1 .item p,
+ .main-tabletBetween2 .item p,
+ .main-tabletOver .item p,
+ .main-tablet32gb .item p,
+ .main-tablet64gb .item p,
+ .main-tablet641gb .item p,
+ .main-laptop1 .item p,
+ .main-laptop2 .item p,
+ .main-laptop3 .item p,
+ .main-laptopUnder .item p,
+ .main-laptopOver .item p,
+ .main-laptopIntelcore .item p,
+ .main-laptopIntelcore2 .item p,
+ .main-laptopAmdryzen .item p,
+ .main-laptopBetween .item p,
+ .main-Gaming1 .item p,
+ .main-Gaming2 .item p,
+ .main-Gaming3 .item p,
+ .main-GamingUnder1 .item p,
+ .main-GamingUnder2 .item p,
+ .main-GamingOver .item p,
+ .main-GamingConsole1 .item p,
+ .main-GamingConsole2 .item p,
+ .main-GamingAccessories1 .item p,
+ .main-GamingAccessories2 .item p,
+ .main-GamingBetween .item p,
+ .main-tv1 .item p,
+ .main-tv2 .item p,
+ .main-tvUnder .item p,
+ .main-tvSmart .item p,
+ .main-tvSmart2 .item p,
+ .main-tvOver .item p,
+ .main-tvNormal .item p,
+ .more-products p,
+ .main-tvBetween .item p,
+ .main-plaptop1 .item p,
+ .main-pbetween200 .item p,
+ .main-ptablet2 .item p,
+ .main-p8gb .item p,
+ .main-pGamingAccessories1 .item p
+ {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 300;
+    position: absolute;
+    top: 0;
+    line-height: 17px;
+}
+ .slider .item .in-stock,
+ .slider-2 .item .in-stock,
+ .slider-opt1 .item .in-stock,
+ .slider-opt2 .item .in-stock,
+ .slider-opt3 .item .in-stock,
+ .slider-opt4 .item .in-stock,
+ .slider-opt5 .item .in-stock,
+ .slider-offers .item .in-stock,
+ .main-products1 .item .in-stock,
+ .main-products2 .item .in-stock,
+ .main-products3 .item .in-stock,
+ .main-products4 .item .in-stock,
+ .main-under21 .item .in-stock,
+ .main-under22 .item .in-stock,
+ .main-between200 .item .in-stock,
+ .main-between2001 .item .in-stock,
+ .main-between58 .item .in-stock,
+ .main-between581 .item .in-stock,
+ .main-over1000 .item .in-stock,
+ .main-over10001 .item .in-stock,
+ .main-12gb .item .in-stock,
+ .main-8gb .item .in-stock,
+ .main-81gb .item .in-stock,
+ .main-6gb .item .in-stock,
+ .main-61gb .item .in-stock,
+ .main-tablet1 .item .in-stock,
+ .main-tablet2 .item .in-stock,
+ .main-tablet3 .item .in-stock,
+ .main-tabletUnder1 .item .in-stock,
+ .main-tabletBetween1 .item .in-stock,
+ .main-tabletBetween2 .item .in-stock,
+ .main-tabletOver .item .in-stock,
+ .main-tablet32gb .item .in-stock,
+ .main-tablet64gb .item .in-stock,
+ .main-tablet641gb .item .in-stock,
+ .main-laptop1 .item .in-stock,
+ .main-laptop2 .item .in-stock,
+ .main-laptop3 .item .in-stock,
+ .main-laptopUnder .item .in-stock,
+ .main-laptopOver .item .in-stock,
+ .main-laptopIntelcore .item .in-stock,
+ .main-laptopIntelcore2 .item .in-stock,
+ .main-laptopAmdryzen .item .in-stock,
+ .main-laptopBetween .item .in-stock,
+ .main-Gaming1 .item .in-stock,
+ .main-Gaming2 .item .in-stock,
+ .main-Gaming3 .item .in-stock,
+ .main-GamingUnder1 .item .in-stock,
+ .main-GamingUnder2 .item .in-stock,
+ .main-GamingOver .item .in-stock,
+ .main-GamingConsole1 .item .in-stock,
+ .main-GamingConsole2 .item .in-stock,
+ .main-GamingAccessories1 .item .in-stock,
+ .main-GamingAccessories2 .item .in-stock,
+ .main-GamingBetween .item .in-stock,
+ .main-tv1 .item .in-stock,
+ .main-tv2 .item .in-stock,
+ .main-tvUnder .item .in-stock,
+ .main-tvSmart .item .in-stock,
+ .main-tvSmart2 .item .in-stock,
+ .main-tvOver .item .in-stock,
+ .main-tvNormal .item .in-stock,
+ .more-products .in-stock,
+ .main-tvBetween .item .in-stock,
+ .main-plaptop1 .item .in-stock,
+ .main-pbetween200 .item .in-stock,
+ .main-ptablet2 .item .in-stock,
+ .main-p8gb .item .in-stock,
+ .main-pGamingAccessories1 .item .in-stock
+ {
+    color: green;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 27%;
+    
+}
+.slider .item .stars,
+.slider-2 .item .stars,
+.slider-opt1 .item .stars,
+.slider-opt2 .item .stars,
+.slider-opt3 .item .stars,
+.slider-opt4 .item .stars,
+.slider-opt5 .item .stars,
+.slider-offers .item .stars,
+.main-products1 .item .stars,
+.main-products2 .item .stars,
+.main-products3 .item .stars,
+.main-products4 .item .stars,
+.main-under21 .item .stars,
+.main-under22 .item .stars,
+.main-between200 .item .stars,
+.main-between2001 .item .stars,
+.main-between58 .item .stars,
+.main-between581 .item .stars,
+.main-over1000 .item .stars,
+.main-over10001 .item .stars,
+.main-12gb .item .stars,
+.main-8gb .item .stars,
+.main-81gb .item .stars,
+.main-6gb .item .stars,
+.main-61gb .item .stars,
+.main-tablet1 .item .stars,
+.main-tablet2 .item .stars,
+.main-tablet3 .item .stars,
+.main-tabletUnder1 .item .stars,
+.main-tabletBetween1 .item .stars,
+.main-tabletBetween2 .item .stars,
+.main-tabletOver .item .stars,
+.main-tablet32gb .item .stars,
+.main-tablet64gb .item .stars,
+.main-tablet641gb .item .stars,
+.main-laptop1 .item .stars,
+.main-laptop2 .item .stars,
+.main-laptop3 .item .stars,
+.main-laptopUnder .item .stars,
+.main-laptopOver .item .stars,
+.main-laptopIntelcore .item .stars,
+.main-laptopIntelcore2 .item .stars,
+.main-laptopAmdryzen .item .stars,
+.main-laptopBetween .item .stars,
+.main-Gaming1 .item .stars,
+.main-Gaming2 .item .stars,
+.main-Gaming3 .item .stars,
+.main-GamingUnder1 .item .stars,
+.main-GamingUnder2 .item .stars,
+.main-GamingOver .item .stars,
+.main-GamingConsole1 .item .stars,
+.main-GamingConsole2 .item .stars,
+.main-GamingAccessories2 .item .stars,
+.main-GamingAccessories1 .item .stars,
+.main-GamingBetween .item .stars,
+.main-tv1 .item .stars,
+.main-tv2 .item .stars,
+.main-tvUnder .item .stars,
+.main-tvSmart .item .stars,
+.main-tvSmart2 .item .stars,
+.main-tvOver .item .stars,
+.main-tvNormal .item .stars,
+.more-products .stars,
+.main-tvBetween .item .stars,
+.main-plaptop1 .item .stars,
+.main-pbetween200 .item .stars,
+.main-ptablet2 .item .stars,
+.main-p8gb .item .stars,
+.main-pGamingAccessories1 .item .stars
+{
+    position: absolute;
+    top: 37%;
+}
+ .slider .item .price-cut,
+ .slider-2 .item .price-cut,
+ .slider-opt1 .item .price-cut,
+ .slider-opt2 .item .price-cut,
+ .slider-opt3 .item .price-cut,
+ .slider-opt4 .item .price-cut,
+ .slider-opt5 .item .price-cut,
+ .slider-offers .item .price-cut,
+ .main-products1 .item .price-cut,
+ .main-products2 .item .price-cut,
+ .main-products3 .item .price-cut,
+ .main-products4 .item .price-cut,
+ .main-under21 .item .price-cut,
+ .main-under22 .item .price-cut,
+ .main-between200 .item .price-cut,
+ .main-between2001 .item .price-cut,
+ .main-between58 .item .price-cut,
+ .main-between581 .item .price-cut,
+ .main-over1000 .item .price-cut,
+ .main-over10001 .item .price-cut,
+ .main-12gb .item .price-cut,
+ .main-8gb .item .price-cut,
+ .main-81gb .item .price-cut,
+ .main-6gb .item .price-cut,
+ .main-61gb .item .price-cut,
+ .main-tablet1 .item .price-cut,
+ .main-tablet2 .item .price-cut,
+ .main-tablet3 .item .price-cut,
+ .main-tabletUnder1 .item .price-cut,
+ .main-tabletBetween1 .item .price-cut,
+ .main-tabletBetween2 .item .price-cut,
+ .main-tabletOver .item .price-cut,
+ .main-tablet32gb .item .price-cut,
+ .main-tablet64gb .item .price-cut,
+ .main-tablet641gb .item .price-cut,
+ .main-laptop1 .item .price-cut,
+ .main-laptop2 .item .price-cut,
+ .main-laptop3 .item .price-cut,
+ .main-laptopUnder .item .price-cut,
+ .main-laptopOver .item .price-cut,
+ .main-laptopIntelcore .item .price-cut,
+ .main-laptopIntelcore2 .item .price-cut,
+ .main-laptopAmdryzen .item .price-cut,
+ .main-laptopBetween .item .price-cut,
+ .main-Gaming1 .item .price-cut,
+ .main-Gaming2 .item .price-cut,
+ .main-Gaming3 .item .price-cut,
+ .main-GamingUnder1 .item .price-cut,
+ .main-GamingUnder2 .item .price-cut,
+ .main-GamingOver .item .price-cut,
+ .main-GamingConsole1 .item .price-cut,
+ .main-GamingConsole2 .item .price-cut,
+ .main-GamingAccessories1 .item .price-cut,
+ .main-GamingAccessories2 .item .price-cut,
+ .main-GamingBetween .item .price-cut,
+ .main-tv1 .item .price-cut,
+ .main-tv2 .item .price-cut,
+ .main-tvUnder .item .price-cut,
+ .main-tvSmart .item .price-cut,
+ .main-tvSmart2 .item .price-cut,
+ .main-tvOver .item .price-cut,
+ .main-tvNormal .item .price-cut,
+ .more-products .price-cut,
+ .main-tvBetween .item .price-cut,
+ .main-plaptop1 .item .price-cut,
+ .main-pbetween200 .item .price-cut,
+ .main-ptablet2 .item .price-cut,
+ .main-p8gb .item .price-cut,
+ .main-pGamingAccessories1 .item .price-cut
+ {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    position: absolute;
+    top: 45%;
+}
+ .slider .item .price-cut h2,
+ .slider-2 .item .price-cut h2,
+ .slider-opt1 .item .price-cut h2,
+ .slider-opt2 .item .price-cut h2,
+ .slider-opt3 .item .price-cut h2,
+ .slider-opt4 .item .price-cut h2,
+ .slider-opt5 .item .price-cut h2,
+ .slider-offers .item .price-cut h2,
+ .main-products1 .item .price-cut h2,
+ .main-products2 .item .price-cut h2,
+ .main-products3 .item .price-cut h2,
+ .main-products4 .item .price-cut h2,
+ .main-under21 .item .price-cut h2,
+ .main-under22 .item .price-cut h2,
+ .main-between200 .item .price-cut h2,
+ .main-between2001 .item .price-cut h2,
+ .main-between58 .item .price-cut h2,
+ .main-between581 .item .price-cut h2,
+ .main-over1000 .item .price-cut h2,
+ .main-over10001 .item .price-cut h2,
+ .main-12gb .item .price-cut h2,
+ .main-8gb .item .price-cut h2,
+ .main-81gb .item .price-cut h2,
+ .main-6gb .item .price-cut h2,
+ .main-61gb .item .price-cut h2,
+ .main-tablet1 .item .price-cut h2,
+ .main-tablet2 .item .price-cut h2,
+ .main-tablet3 .item .price-cut h2,
+ .main-tabletUnder1 .item .price-cut h2,
+ .main-tabletBetween1 .item .price-cut h2,
+ .main-tabletBetween2 .item .price-cut h2,
+ .main-tabletOver .item .price-cut h2,
+ .main-tablet32gb .item .price-cut h2,
+ .main-tablet64gb .item .price-cut h2,
+ .main-tablet641gb .item .price-cut h2,
+ .main-laptop1 .item .price-cut h2,
+ .main-laptop2 .item .price-cut h2,
+ .main-laptop3 .item .price-cut h2,
+ .main-laptopUnder .item .price-cut h2,
+ .main-laptopOver .item .price-cut h2,
+ .main-laptopIntelcore .item .price-cut h2,
+ .main-laptopIntelcore2 .item .price-cut h2,
+ .main-laptopAmdryzen .item .price-cut h2,
+ .main-laptopBetween .item .price-cut h2,
+ .main-Gaming1 .item .price-cut h2,
+ .main-Gaming2 .item .price-cut h2,
+ .main-Gaming3 .item .price-cut h2,
+ .main-GamingUnder1 .item .price-cut h2,
+ .main-GamingUnder2 .item .price-cut h2,
+ .main-GamingOver .item .price-cut h2,
+ .main-GamingConsole1 .item .price-cut h2,
+ .main-GamingConsole2 .item .price-cut h2,
+ .main-GamingAccessories1 .item .price-cut h2,
+ .main-GamingAccessories2 .item .price-cut h2,
+ .main-GamingBetween .item .price-cut h2,
+ .main-tv1 .item .price-cut h2,
+ .main-tv2 .item .price-cut h2,
+ .main-tvUnder .item .price-cut h2,
+ .main-tvSmart .item .price-cut h2,
+ .main-tvSmart2 .item .price-cut h2,
+ .main-tvOver .item .price-cut h2,
+ .main-tvNormal .item .price-cut h2,
+ .more-products .price-cut h2,
+ .main-tvBetween .item .price-cut h2,
+ .main-plaptop1 .item .price-cut h2,
+ .main-pbetween200 .item .price-cut h2,
+ .main-ptablet2 .item .price-cut h2,
+ .main-p8gb .item .price-cut h2,
+ .main-pGamingAccessories1 .item .price-cut h2
+ {
+    font-size: 20px;
+    text-decoration: line-through;
+}
+ .slider .item .price-cut span,
+ .slider-2 .item .price-cut span,
+ .slider-opt1 .item .price-cut span,
+ .slider-opt2 .item .price-cut span,
+ .slider-opt3 .item .price-cut span,
+ .slider-opt4 .item .price-cut span,
+ .slider-opt5 .item .price-cut span,
+ .slider-offers .item .price-cut span,
+ .main-products1 .item .price-cut span,
+ .main-products2 .item .price-cut span,
+ .main-products3 .item .price-cut span,
+ .main-products4 .item .price-cut span,
+ .main-under21 .item .price-cut span,
+ .main-under22 .item .price-cut span,
+ .main-between200 .item .price-cut span,
+ .main-between2001 .item .price-cut span,
+ .main-between58 .item .price-cut span,
+ .main-between581 .item .price-cut span,
+ .main-over1000 .item .price-cut span,
+ .main-over10001 .item .price-cut span,
+ .main-12gb .item .price-cut span,
+ .main-8gb .item .price-cut span,
+ .main-81gb .item .price-cut span,
+ .main-6gb .item .price-cut span,
+ .main-61gb .item .price-cut span,
+ .main-tablet1 .item .price-cut span,
+ .main-tablet2 .item .price-cut span,
+ .main-tablet3 .item .price-cut span,
+ .main-tabletUnder1 .item .price-cut span,
+ .main-tabletBetween1 .item .price-cut span,
+ .main-tabletBetween2 .item .price-cut span,
+ .main-tabletOver .item .price-cut span,
+ .main-tablet32gb .item .price-cut span,
+ .main-tablet64gb .item .price-cut span,
+ .main-tablet641gb .item .price-cut span,
+ .main-laptop1 .item .price-cut span,
+ .main-laptop2 .item .price-cut span,
+ .main-laptop3 .item .price-cut span,
+ .main-laptopUnder .item .price-cut span,
+ .main-laptopOver .item .price-cut span,
+ .main-laptopIntelcore .item .price-cut span,
+ .main-laptopIntelcore2 .item .price-cut span,
+ .main-laptopAmdryzen .item .price-cut span,
+ .main-laptopBetween .item .price-cut span,
+ .main-Gaming1 .item .price-cut span,
+ .main-Gaming2 .item .price-cut span,
+ .main-Gaming3 .item .price-cut span,
+ .main-GamingUnder1 .item .price-cut span,
+ .main-GamingUnder2 .item .price-cut span,
+ .main-GamingOver .item .price-cut span,
+ .main-GamingConsole1 .item .price-cut span,
+ .main-GamingConsole2 .item .price-cut span,
+ .main-GamingAccessories1 .item .price-cut span,
+ .main-GamingAccessories2 .item .price-cut span,
+ .main-GamingBetween .item .price-cut span,
+ .main-tv1 .item .price-cut span,
+ .main-tv2 .item .price-cut span,
+ .main-tvUnder .item .price-cut span,
+ .main-tvSmart .item .price-cut span,
+ .main-tvSmart2 .item .price-cut span,
+ .main-tvOver .item .price-cut span,
+ .main-tvNormal .item .price-cut span,
+ .more-products .price-cut span,
+ .main-tvBetween .item .price-cut span,
+ .main-plaptop1 .item .price-cut span,
+ .main-pbetween200 .item .price-cut span,
+ .main-ptablet2 .item .price-cut span,
+ .main-p8gb .item .price-cut span,
+ .main-pGamingAccessories1 .item .price-cut span
+ {
+    width: 40px;
+    margin-left: 10px;
+    background-color: #fccb38;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .slider .item .actuall-price,
+ .slider-2 .item .actuall-price,
+ .slider-opt1 .actuall-price,
+ .slider-opt2 .actuall-price,
+ .slider-opt3 .actuall-price,
+ .slider-opt4 .actuall-price,
+ .slider-opt5 .actuall-price,
+ .slider-offers .actuall-price,
+ .main-products1 .actuall-price,
+ .main-products2 .actuall-price,
+ .main-products3 .actuall-price,
+ .main-products4 .actuall-price,
+ .main-under21 .actuall-price,
+ .main-under22 .actuall-price,
+ .main-between200 .actuall-price,
+ .main-between2001 .actuall-price,
+ .main-between58 .actuall-price,
+ .main-between581 .actuall-price,
+ .main-over1000 .actuall-price,
+ .main-over10001 .actuall-price,
+ .main-12gb .actuall-price,
+ .main-8gb .actuall-price,
+ .main-81gb .actuall-price,
+ .main-6gb .actuall-price,
+ .main-61gb .actuall-price,
+ .main-tablet1 .actuall-price,
+ .main-tablet2 .actuall-price,
+ .main-tablet3 .actuall-price,
+ .main-tabletUnder1 .actuall-price,
+ .main-tabletBetween1 .actuall-price,
+ .main-tabletBetween2 .actuall-price,
+ .main-tabletOver .actuall-price,
+ .main-tablet32gb .actuall-price,
+ .main-tablet64gb .actuall-price,
+ .main-tablet641gb .actuall-price,
+ .main-laptop1 .actuall-price,
+ .main-laptop2 .actuall-price,
+ .main-laptop3 .actuall-price,
+ .main-laptopUnder .actuall-price,
+ .main-laptopOver .actuall-price,
+ .main-laptopIntelcore .actuall-price,
+ .main-laptopIntelcore2 .actuall-price,
+ .main-laptopAmdryzen .actuall-price,
+ .main-laptopBetween .actuall-price,
+ .main-Gaming1 .actuall-price,
+ .main-Gaming2 .actuall-price,
+ .main-Gaming3 .actuall-price,
+ .main-GamingUnder1 .actuall-price,
+ .main-GamingUnder2 .actuall-price,
+ .main-GamingOver .actuall-price,
+ .main-GamingConsole1 .actuall-price,
+ .main-GamingConsole2 .actuall-price,
+ .main-GamingAccessories1 .actuall-price,
+ .main-GamingAccessories2 .actuall-price,
+ .main-GamingBetween .actuall-price,
+ .main-tv1 .actuall-price,
+ .main-tv2 .actuall-price,
+ .main-tvUnder .actuall-price,
+ .main-tvSmart .actuall-price,
+ .main-tvSmart2 .actuall-price,
+ .main-tvOver .actuall-price,
+ .main-tvNormal .actuall-price,
+ .more-products .actuall-price,
+ .main-tvBetween .actuall-price,
+ .main-plaptop1 .actuall-price,
+ .main-pbetween200 .actuall-price,
+ .main-ptablet2 .actuall-price,
+ .main-p8gb .actuall-price,
+ .main-pGamingAccessories1 .actuall-price
+ {
+    color: #c00033;
+    font-weight: 800;
+    font-size: 23px;
+    margin-top: 5px;
+    position: absolute;
+    top: 58%;
+}
+ .slider .item button,
+ .slider-2 .item button,
+ .slider-opt1 .item button,
+ .slider-opt2 .item button,
+ .slider-opt3 .item button,
+ .slider-opt4 .item button,
+ .slider-opt5 .item button,
+ .slider-offers .item button,
+ .main-products1 .item button,
+ .main-products2 .item button,
+ .main-products3 .item button,
+ .main-products4 .item button,
+ .main-under21 .item button,
+ .main-under22 .item button,
+ .main-between200 .item button,
+ .main-between2001 .item button,
+ .main-between58 .item button, 
+ .main-between581 .item button, 
+ .main-over1000 .item button,
+ .main-over10001 .item button, 
+ .main-12gb .item button, 
+ .main-8gb .item button, 
+ .main-81gb .item button, 
+ .main-6gb .item button, 
+ .main-61gb .item button,
+ .main-tablet1 .item button,
+ .main-tablet2 .item button,
+ .main-tablet3 .item button,
+ .main-tabletUnder1  .item button,
+ .main-tabletBetween1 .item button,
+ .main-tabletBetween2 .item button,
+ .main-tabletOver .item button,
+ .main-tablet32gb .item button,
+ .main-tablet64gb .item button,
+ .main-tablet641gb .item button,
+ .main-laptop1 .item button,
+ .main-laptop2 .item button,
+ .main-laptop3 .item button,
+ .main-laptopUnder .item button,
+ .main-laptopOver .item button,
+ .main-laptopIntelcore .item button,
+ .main-laptopIntelcore2 .item button,
+ .main-laptopAmdryzen .item button,
+ .main-laptopBetween .item button,
+ .main-Gaming1 .item button,
+ .main-Gaming2 .item button,
+ .main-Gaming3 .item button,
+ .main-GamingUnder1 .item button,
+ .main-GamingUnder2 .item button,
+ .main-GamingOver .item button,
+ .main-GamingConsole1 .item button,
+ .main-GamingConsole2 .item button,
+ .main-GamingAccessories1 .item button,
+ .main-GamingAccessories2 .item button,
+ .main-GamingBetween .item button,
+ .main-tv1 .item button,
+ .main-tv2 .item button,
+ .main-tvUnder .item button,
+ .main-tvSmart .item button,
+ .main-tvSmart2 .item button,
+ .main-tvOver .item button,
+ .main-tvNormal .item button,
+ .more-products button,
+ .main-tvBetween .item button,
+ .main-plaptop1 .item button,
+ .main-pbetween200 .item button,
+ .main-ptablet2 .item button,
+ .main-p8gb .item button,
+ .main-pGamingAccessories1 .item button
+ {
+    width: 90%;
+    padding: 12px 0;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #c00033;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 15px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+}
+ .slider .item button:hover,
+ .slider-2 .item button:hover,
+ .slider-opt1 .item button:hover,
+ .slider-opt2 .item button:hover,
+ .slider-opt3 .item button:hover,
+ .slider-opt4 .item button:hover,
+ .slider-opt5 .item button:hover,
+ .main-products1 .item button:hover,
+ .main-products2 .item button:hover,
+ .main-products3 .item button:hover,
+ .main-products4 .item button:hover,
+ .main-under21 .item button:hover,
+ .main-under22 .item button:hover,
+ .main-between200 .item button:hover,
+ .main-between2001 .item button:hover,
+ .main-between58 .item button:hover,
+ .main-between581 .item button:hover,
+ .main-over1000 .item button:hover,
+ .main-over10001 .item button:hover,
+ .main-12gb .item button:hover,
+ .main-8gb .item button:hover,
+ .main-81gb .item button:hover,
+ .main-6gb .item button:hover,
+ .main-61gb .item button:hover,
+ .main-tablet1 .item button:hover,
+ .main-tablet2 .item button:hover,
+ .main-tablet3 .item button:hover,
+ .main-tabletUnder1  .item button:hover,
+ .main-tabletBetween1 .item button:hover,
+ .main-tabletBetween2 .item button:hover,
+ .main-tabletOver .item button:hover,
+ .main-tablet32gb .item button:hover,
+ .main-tablet64gb .item button:hover,
+ .main-tablet641gb .item button:hover,
+ .main-laptop1 .item button:hover,
+ .main-laptop2 .item button:hover,
+ .main-laptop3 .item button:hover,
+ .main-laptopUnder .item button:hover,
+ .main-laptopOver .item button:hover,
+ .main-laptopIntelcore .item button:hover,
+ .main-laptopIntelcore2 .item button:hover,
+ .main-laptopAmdryzen .item button:hover,
+ .main-laptopBetween .item button:hover,
+ .main-Gaming1 .item button:hover,
+ .main-Gaming2 .item button:hover,
+ .main-Gaming3 .item button:hover,
+ .main-GamingUnder1 .item button:hover,
+ .main-GamingUnder2 .item button:hover,
+ .main-GamingOver .item button:hover,
+ .main-GamingConsole1 .item button:hover,
+ .main-GamingConsole2 .item button:hover,
+ .main-GamingAccessories1 .item button:hover,
+ .main-GamingAccessories2 .item button:hover,
+ .main-GamingBetween .item button:hover,
+ .main-tv1 .item button:hover,
+ .main-tv2 .item button:hover,
+ .main-tvUnder .item button:hover,
+ .main-tvSmart .item button:hover,
+ .main-tvSmart2 .item button:hover,
+ .main-tvOver .item button:hover,
+ .main-tvNormal .item button:hover,
+ .more-products button:hover,
+ .main-GamingBetween9 .item button:hover,
+ .main-plaptop1 .item button:hover,
+ .main-pbetween200 .item button:hover,
+ .main-ptablet2 .item button:hover,
+ .main-p8gb .item button:hover,
+ .main-pGamingAccessories1 .item button:hover
+ {
+    background-color: #c00033d0;
+}
+/*.cartTab {
+    width: 400px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+body.showCart .cartTab {
+    right: 0;
+}
+body.showCart .top-offers {
+    transform: translateX(-250px);
+}
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr); 
+}
+.cartTab .btn button {
+    background-color: #fccb38;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 15px 0;
+    
+}
+.cartTab .btn .checkOut {
+    position: absolute;
+    bottom: 0;
+    right: 46%;
+    padding: 15px 73px; 
+}
+.cartTab .btn .close {
+    background-color: #eee;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px 73px;
+}
+.cartTab .listCart .item img {
+    width: 100%;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+}
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+.listCart {
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+*/
+.card {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: #453e3b;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 999;
+}
+.card h1 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.card .checkOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut div {
+    background-color: #fccb38;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .checkOut div:nth-child(2) {
+   background-color: #1c1f25; 
+   color: #fff;
+}
+.active .card {
+    left: calc(100% - 500px);
+}
+/*.active .top-offers {
+    transform: translateX(-250px);
+}*/
+.listCard li,
+.listCard2 li,
+.listCard3 li,
+.listCard4 li,
+.listCard5 li,
+.listCard6 li,
+.listCard7 li,
+.listCard8 li,
+.listCard9 li, 
+.listCard10 li, 
+.listCard11 li,
+.listCard12 li,
+.listCard13 li,
+.listCard14 li,
+.listCard15 li,
+.listCard16 li,
+.listCard17 li,
+.listCard18 li,
+.listCard19 li,
+.listCard20 li,
+.listCard21 li,
+.listCard22 li,
+.listCard23 li,
+.listCard24 li,
+.listCard25 li,
+.listCard27 li,
+.listCard26 li,
+.listCard28 li,
+.listCard29 li,
+.listCard30 li,
+.listCard31 li,
+.listCard32 li
+{
+    display: flex;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.listCard li  div,
+.listCard2 li  div,
+.listCard3 li  div,
+.listCard4 li  div,
+.listCard5 li  div,
+.listCard6 li  div,
+.listCard7 li  div,
+.listCard8 li  div,
+.listCard9 li  div,
+.listCard10 li  div,
+.listCard11 li  div,
+.listCard12 li  div,
+.listCard13 li  div,
+.listCard14 li  div,
+.listCard15 li  div,
+.listCard16 li  div,
+.listCard17 li  div,
+.listCard18 li  div,
+.listCard19 li  div,
+.listCard20 li  div,
+.listCard21 li  div,
+.listCard22 li  div,
+.listCard23 li  div,
+.listCard24 li  div,
+.listCard25 li  div,
+.listCard26 li  div,
+.listCard27 li  div,
+.listCard28 li  div,
+.listCard29 li  div,
+.listCard30 li  div,
+.listCard31 li  div,
+.listCard32 li  div
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listCard li img,
+.listCard2 li img,
+.listCard3 li img,
+.listCard4 li img,
+.listCard5 li img,
+.listCard6 li img,
+.listCard7 li img,
+.listCard8 li img,
+.listCard9 li img,
+.listCard10 li img,
+.listCard11 li img,
+.listCard12 li img,
+.listCard13 li img,
+.listCard14 li img,
+.listCard15 li img,
+.listCard16 li img,
+.listCard17 li img,
+.listCard18 li img,
+.listCard19 li img,
+.listCard20 li img,
+.listCard21 li img,
+.listCard22 li img,
+.listCard23 li img,
+.listCard24 li img,
+.listCard25 li img,
+.listCard26 li img,
+.listCard27 li img,
+.listCard28 li img,
+.listCard29 li img,
+.listCard30 li img,
+.listCard31 li img,
+.listCard32 li img
+{
+    width: 20%;
+    margin: 0 20px;
+}
+.listCard li .valueName,
+.listCard2 li .valueName,
+.listCard3 li .valueName,
+.listCard4 li .valueName,
+.listCard5 li .valueName,
+.listCard6 li .valueName,
+.listCard7 li .valueName,
+.listCard8 li .valueName,
+.listCard9 li .valueName, 
+.listCard10 li .valueName, 
+.listCard11 li .valueName,
+.listCard12 li .valueName,
+.listCard13 li .valueName,
+.listCard14 li .valueName,
+.listCard15 li .valueName,
+.listCard16 li .valueName,
+.listCard17 li .valueName,
+.listCard18 li .valueName,
+.listCard19 li .valueName,
+.listCard20 li .valueName,
+.listCard21 li .valueName,
+.listCard22 li .valueName,
+.listCard23 li .valueName,
+.listCard24 li .valueName,
+.listCard25 li .valueName,
+.listCard26 li .valueName,
+.listCard27 li .valueName,
+.listCard28 li .valueName,
+.listCard29 li .valueName,
+.listCard30 li .valueName,
+.listCard31 li .valueName,
+.listCard32 li .valueName
+{
+    margin-left: 0px;
+    max-width: 330px;
+}
+.listCard li .changeQuantity,
+.listCard2 li .changeQuantity,
+.listCard3 li .changeQuantity,
+.listCard4 li .changeQuantity,
+.listCard5 li .changeQuantity,
+.listCard6 li .changeQuantity,
+.listCard7 li .changeQuantity,
+.listCard8 li .changeQuantity,
+.listCard9 li .changeQuantity,
+.listCard10 li .changeQuantity,
+.listCard11 li .changeQuantity,
+.listCard12 li .changeQuantity,
+.listCard13 li .changeQuantity,
+.listCard14 li .changeQuantity,
+.listCard15 li .changeQuantity,
+.listCard16 li .changeQuantity,
+.listCard17 li .changeQuantity,
+.listCard18 li .changeQuantity,
+.listCard19 li .changeQuantity,
+.listCard21 li .changeQuantity,
+.listCard20 li .changeQuantity,
+.listCard22 li .changeQuantity,
+.listCard23 li .changeQuantity,
+.listCard24 li .changeQuantity,
+.listCard25 li .changeQuantity,
+.listCard26 li .changeQuantity,
+.listCard27 li .changeQuantity,
+.listCard28 li .changeQuantity,
+.listCard29 li .changeQuantity,
+.listCard30 li .changeQuantity,
+.listCard31 li .changeQuantity,
+.listCard32 li .changeQuantity
+ {
+    width: 80px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #282828;
+}
+.listCard li .addQuantity, 
+.listCard2 li .addQuantity,
+.listCard3 li .addQuantity,
+.listCard4 li .addQuantity,
+.listCard5 li .addQuantity,
+.listCard6 li .addQuantity,
+.listCard7 li .addQuantity,
+.listCard8 li .addQuantity,
+.listCard9 li .addQuantity,
+.listCard10 li .addQuantity,
+.listCard11 li .addQuantity,
+.listCard12 li .addQuantity,
+.listCard13 li .addQuantity,
+.listCard14 li .addQuantity,
+.listCard15 li .addQuantity,
+.listCard16 li .addQuantity,
+.listCard17 li .addQuantity,
+.listCard18 li .addQuantity,
+.listCard19 li .addQuantity,
+.listCard21 li .addQuantity,
+.listCard20 li .addQuantity,
+.listCard21 li .addQuantity,
+.listCard22 li .addQuantity,
+.listCard23 li .addQuantity,
+.listCard24 li .addQuantity,
+.listCard25 li .addQuantity,
+.listCard27 li .addQuantity,
+.listCard26 li .addQuantity,
+.listCard28 li .addQuantity,
+.listCard29 li .addQuantity,
+.listCard30 li .addQuantity,
+.listCard31 li .addQuantity,
+.listCard32 li .addQuantity
+{
+    width: 30px;
+    height: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.different-opt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    background-color: #f6f6f6;
+    padding-top: 2.3%;
+}
+.different-opt .dif-opt {
+    width: 70%;
+}
+.different-opt .dif-opt .options {
+    display: flex;
+    width: 715px;
+    height: 80px;
+    padding: 10px 0 0px;
+    border-bottom: 2px solid #999;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+.different-opt .dif-opt .options h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: #c00033;
+    padding: 20px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.different-opt .dif-opt .options .changePro {
+    border-bottom: 3px solid #c00033;
+}
+.different-opt .dif-opt .options .changePro:hover {
+    border-bottom: 3px solid #c00033;
+}
+.different-opt .dif-opt .options-box {
+    width: 100%;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.grid {
+    grid-template-columns: 26.5% 26.5% 26.5% 26.5% 26.5%;
+    grid-template-rows: 550px;
+}
+
+.grid1 {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 550px;
+}
+.different-opt .options-box .slider-opt1 .grid{
+    display: grid;
+    grid-template-columns: 26.5% 26.5% 26.5% 26.5% 26.5%;
+    grid-template-rows: 550px;
+}
+.different-opt .options-box .slider-opt2{
+    display: none;
+}
+.different-opt .options-box .slider-opt3{
+    display: none;
+}
+.different-opt .options-box .slider-opt4{
+    display: none;
+}
+.different-opt .options-box .slider-opt5 {
+    display: none;
+}
+.two-boxes {
+    width: 74%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.two-boxes .first-box,
+.two-boxes .second-box {
+    display: flex;
+    height: 135px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 30px 30px;
+    border: 2px solid #999;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f0f0f0;
+}
+.two-boxes .second-box {
+    margin-left: 20px;
+}
+.two-boxes .first-box .lego-logo {
+    width: 60px;
+    height: 60px;
+}
+.two-boxes .first-box h2,
+.two-boxes .second-box h2 {
+    font-size: 21px;
+    font-weight: 800;
+    margin-left: 10px;
+    max-width: 400px;
+}
+.two-boxes .first-box .lego-man {
+    width: 190px;
+    height: 210px;
+    z-index: 100;
+}
+.two-boxes .first-box::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 10px;
+    background-color: #fccb38;
+}
+.two-boxes .second-box::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 10px;
+    background-color: #c00033;
+}
+.two-boxes .second-box .huawei-logo {
+    width: 80px;
+    height: 70px;
+}
+.two-boxes .second-box .huawei-phone {
+    width: 100px;
+    height: 170px;
+    z-index: 100;
+    margin-right: 42px;
+}
+.newsletter {
+    width: 68%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 4%;
+    background-color: #fff2d6;
+    padding: 30px 30px 5px;
+    border-radius: 10px;
+}
+.newsletter .newsletter-box h2 {
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.newsletter .newsletter-box p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #c00033;
+    margin-left: 13px;
+    margin-top: 7px;
+}
+.newsletter .newsletter-box h6 {
+    margin-top: 10px;
+}
+.newsletter .newsletter-input {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.newsletter .newsletter-box input {
+    width: 400px;
+    padding: 15px;
+    color: #999;
+    font-size: 16px;
+    border: 1px solid #fccb38;
+    outline: 0;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.newsletter .newsletter-box button {
+    padding: 14px 28px;
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 800;
+    border: 1px solid #fccb38;
+    background-color: #fccb38;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+.newsletter .newsletter-img {
+    width: 400px;
+    margin-top: -20px;
+}
+.footer-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    margin-top: 4%;
+    padding: 7px;
+}
+.footer-bar img {
+    width: 70px;
+}
+.footer-bar span {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0px 0 15px;
+    margin-top: 9px;
+}
+.footer-bar span h2 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #fccb38;
+}
+.footer-bar span p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 5px;
+}
+.footer-bar .download-icons {
+    display: flex;
+    margin-left: 10%;
+}
+.footer-bar .download-icons .google-play {
+    width: 150px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer-bar .download-icons .app-store{
+    width: 150px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191a1c;
+    padding-top: 50px;
+}
+footer .footer-box {
+    display: inline-block;
+    margin: 0 20px;
+    width: 200px;
+    height: 250px;
+}
+footer .footer-box h2 {
+    font-size: 24px;
+    color: #61636a;
+    margin: 6px 0 40px;
+    font-weight: 800;
+    position: relative;
+}
+footer .footer-box h2::before {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    background-color: #fccb38;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+}
+footer .footer-box p {
+    color: #fff;
+    font-size: 16px;
+    margin: 7px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+footer .footer-box p:hover {
+    color: #fccb38;
+    text-decoration: underline;
+}
+footer .footer-box span {
+    display: flex;
+}
+footer .footer-box div {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #61636a;
+    margin: 0 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+footer .footer-box div:hover {
+    background-color: #fccb38;
+}
+.main-div {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    padding: 2% 0;
+}
+.main-div .select-bar {
+    width: 22%;
+    margin-right: -8%;
+    margin-top: 30px;
+}
+.main-div .select-bar h2 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+.main-div .select-bar .select-box {
+    display: flex;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+.main-div .select-bar .select-box p {
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.main-div .select-bar .select-box p span {
+    margin-left: 4px;
+    color: #999;
+}
+.main-div .main-content {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    margin-right: -4%;
+}
+.map-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+.banner {
+    width: 100%;
+    height: 29vh;
+    background: url(img/banner\ picture.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.banner h2 {
+    font-size: 30px;
+    color: #fff;
+    padding-left: 50px;
+    max-width: 700px;
+}
+.promo-div {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.finance-banner {
+    max-width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.finance-banner h2 {
+    position: absolute;
+    z-index: 100;
+    top: 39%;
+    left: 5%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.finance-banner h3 {
+    position: absolute;
+    z-index: 100;
+    top: 54%;
+    left: 5%;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fccb38;
+}
+.finance-banner img {
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.buy-installments {
+    width: 100%;
+    max-width: 65%;
+    margin-top: 60px;
+}
+.buy-installments h1 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.buy-installments .buy-choice {
+    display: flex;
+    margin-top: 40px;
+}
+.buy-installments .buy-choice p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: 24px;
+}
+.buy-installments .buy-choice span {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    background-color: #5c03bc;
+    border-radius: 50%;
+}
+.installments-box {
+    width: 100%;
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.installments-box .installments-calc {
+    padding: 30px 50px;
+    margin: 0 40px;
+    background-color: #f6f9ff;
+}
+.installments-box .installments-calc h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+.installments-box .installments-calc h2 {
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 550px;
+}
+.installments-box .installments-calc .top-input {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    margin-top: 20px;
+    border-bottom: 1px solid #282828;
+}
+.installments-box .installments-calc .input input {
+    width: 260px;
+    padding: 8px 10px;
+    font-size: 15px;
+    margin-top: 5px;
+    outline: 0;
+    border: 1px solid #999;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.installments-box .installments-calc .input select {
+    width: 260px;
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 8px 10px;
+    outline: 0;
+    border: 1px solid #999;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.installments-box .installments-calc .middle-input {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    margin-top: 25px;
+}
+.installments-box .installments-calc .bottom-input {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.installments-box .installments-calc span {
+    display: flex;
+}
+.installments-box .installments-calc span p {
+    margin-left: 10px;
+}
+.installments-box .installments-calc .button-box {
+    width: 100%;
+    margin: 40px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.installments-box .installments-calc .button-box button {
+    padding: 11px 23px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: #fccb38;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: .3s ease;
+}
+.installments-box .installments-calc .button-box button:hover {
+    background-color: #fccb38a7;
+}
+.installments-box .installments-advantages {
+    margin-left: 4%;
+}
+.installments-box .installments-advantages h2{
+    max-width: 550px;
+    margin-bottom: 20px;
+}
+.installments-box .installments-advantages .advantage-box {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    margin-left: -15px;
+}
+.installments-box .installments-advantages .advantage-box  p {
+    margin-left: 10px;
+}
+.eligibility-box {
+    width: 100%;
+    max-width: 68%;
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+.eligibility-box .conditions h1,
+.eligibility-box .documents h1 {
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.eligibility-box span {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.eligibility-box span img {
+    width: 30px;
+    height: 20px;
+}
+.finance-text {
+    width: 100%;
+    max-width: 68%;
+    margin-top: 1.5%;
+}
+.finance-text h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+.finance-text p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #3e3e3e;
+    margin-top: 10px;
+}
+.how-can-we-help {
+    margin-top: 4%;
+}
+.support-box {
+    width: 100%;
+    margin-top: 4%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.support-box .support .support-two {
+    display: flex;
+}
+.support-box .support {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.support-box .support-sbox {
+    margin: 0  45px 50px;
+   
+}
+
+.support-box .support-sbox h2 {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.support-box p {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 6px 0;
+    color: #3e3e3e;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.support-box p:hover {
+    text-decoration: underline;
+}
+.most-read {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3% 14%;
+    margin-top: 3%;
+    background-color: #fff2d6;
+}
+.most-read .most-box {
+    display: flex;
+}
+.most-read .most-box span {
+    padding: 10px 13px;
+    margin: 15px;
+    background-color: #fff;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid #a9936b;
+}
+.most-read .most-box span p {
+    font-size: 13px;
+    color: #999;
+}
+.most-read .most-box span h3 {
+    font-size: 17px;
+    font-weight: 400;
+}
+.frequently {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    background: url(img/rolls.png);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    mix-blend-mode: darken;
+    background-position: left;
+    z-index: 1;
+}
+.frequently h4 {
+    font-size: 23px;
+    font-weight: 900;
+    padding: 80px 0 5px;
+}
+.frequently h2 {
+    font-size: 32px;
+    font-weight: 600;
+    padding: 0px 0 10px;
+}
+.frequently h3 {
+    font-size: 25px;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 8px auto;
+}
+.accordion {
+    width: 930px;
+    margin: 40px auto;
+    z-index: 200;
+}
+.accordion.pp {
+    width: 100%;
+}
+.accordion .pro-page {
+    background-color: #fff;
+    border-top: 1.5px solid #000;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.1), 0px 0px 0px 0px rgba(255, 255, 255, 0.9);
+    z-index: 0;
+    border-radius: 0;
+}
+.accordion .pro-page .collap-text {
+    color: #000;
+}
+.collap-bar {
+    width: 65%;
+    margin-top: 5%;
+}
+.accordion li {
+    text-align: start;
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f4f0f0;
+    z-index: 200;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(0, 0, 0, 0.2);
+} 
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 200;
+    cursor: pointer;
+}
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+input[type="radio"] {
+    display: none;
+}
+.accordion .content {
+    color: #444;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 200;
+    transition: max-height 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+    z-index: 200;
+}
+.accordion input[type="radio"]:checked + label::before {
+    content: '-';
+}
+.dif-img {
+    width: 100%;
+    max-width: 70%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.dif-img .dif-box {
+    text-align: center;
+}
+.dif-img .dif-box span {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin-top: 10px;
+}
+.dif-img .dif-box span p {
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-top: 2px;
+    transition: .2s ease;
+}
+.dif-img .dif-box span p:hover {
+    color: #c00033;
+}
+.feedback-box {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    border-top: 1px solid #000;
+    padding-top: 15px;
+}
+.feedback {
+    margin-right: 40px;
+}
+.feedback-box button {
+    padding: 5px 16px;
+    margin: 0 10px;
+    background-color: #c00033;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: 0;
+    border: 2px solid #000;
+    transition: .3s ease;
+}
+.feedback-box button:hover {
+    background-color: #c00033ce;
+}
+.product-bbox {
+    width: 100%;
+    max-width: 60%;
+    margin-top: 3.5%;
+}
+.product-bbox .product-sbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-bbox .product-info-text {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+.product-bbox .product-stars {
+    display: flex;
+}
+.product-bbox .product-stars .stars-text {
+    font-size: 15px;
+    margin-top: -2px;
+    margin-left: 5px;
+    color: #c00033;
+}
+.product-bbox .product-box {
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.product-bbox .product-box .product-images {
+    width: 550px;
+}
+.product-bbox .product-box .product-images .swiper {
+    width: 100%;
+    padding-bottom: 20px;
+}
+.product-bbox .product-box .product-images .swiper .swiper-wrapper {
+    width: 100%;
+}
+.product-bbox .product-box .product-images .swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+}
+.product-bbox .product-box .product-images .swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+} 
+.product-bbox .product-box .product-info {
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.product-bbox .product-box .product-info .price-box {
+    width: 100%;
+}
+.product-bbox .product-box .product-info .price-box .prp-box {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-bbox .product-box .product-info .price-box .prp-box p {
+    font-size: 14px;
+    font-weight: 400;
+    color: green;
+}
+.product-bbox .product-box .product-info .price-box h2 {
+    color: #999;
+    font-weight: 500;
+    font-size: 21px;
+}
+.product-bbox .product-box .product-info .price-box h1 {
+    color: #c00033;
+    font-weight: 700;
+    font-size: 34px;
+}
+.product-bbox .product-box .product-info .price-box span {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: -10px;
+} 
+.product-bbox .product-box .product-info .storage-box {
+    width: 100%;
+    margin-top: 15px;
+}
+.product-bbox .product-box .product-info .storage-box h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.product-bbox .product-box .product-info .storage-box h2 span {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.product-bbox .product-box .product-info .storage-box button {
+    padding: 7px 15px;
+    font-size: 15px;
+    margin-right: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-bbox .product-box .product-info .storage-box .btn-change1 {
+    border: 2px solid #fccb38;
+}
+.product-bbox .product-box .product-info .services-box {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #eee;
+}
+.product-bbox .product-box .product-info .services-box h2 {
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+}
+.product-bbox .product-box .product-info .services-box h2 i {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #999;
+    border-radius: 50%;
+    font-size: 11px;
+    margin-top: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: .3 ease;
+}
+.product-bbox .product-box .product-info .services-box h2 i:hover {
+    background-color: #6c6c6c;
+}
+.product-bbox .product-box .product-info .services-box .extra-box {
+    display: flex;
+    margin: 10px 0;
+}
+.product-bbox .product-box .product-info .services-box .extra-box p {
+    margin-left: 6px;
+    font-size: 15.5px;
+}
+.product-bbox .product-box .product-info .services-box .mobile-protect {
+    margin-top: 20px;
+}
+.product-bbox .product-box .product-info .services-box .extra-box .mob-pro {
+    margin-left: 15px;
+}
+.product-bbox .product-box .product-info .buy-now {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+}
+.product-bbox .product-box .product-info .buy-now button {
+    width: 65%;
+    padding: 16px 0;
+    background-color: #c00033;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+.similar-bar {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.similar-bar .more-products {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.similar-bar .more-products .similar-text {
+    position: absolute;
+    left: 0;
+    top: -70px;
+}
+.similar-bar h2 {
+    font-size: 30px;
+}
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.swiper-wrapper .swiper-box {
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+}
+.swiper-wrapper .swiper-box .swiperBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    transition: .2s ease;
+}
+
+@media(max-width: 1463px){
+    .home-page {
+        min-width: 85%; 
+    }
+    .home-page-icons {
+        min-width: 84%;
+    }
+    .slider .slider-box,
+    .slider-2 .slider-box,
+    .slider-opt1 .slider-box,
+    .slider-opt3 .slider-box,
+    .slider-opt2 .slider-box,
+    .slider-opt4 .slider-box,
+    .slider-opt5 .slider-box,
+    .slider-offers .slider-box,
+    .main-products1 .slider-box,
+    .main-products2 .slider-box,
+    .main-products3 .slider-box,
+    .main-products4 .slider-box,
+    .main-under21 .slider-box,
+    .main-under22 .slider-box,
+    .main-between200 .slider-box,
+    .main-between2001 .slider-box,
+    .main-between58 .slider-box,
+    .main-between581 .slider-box,
+    .main-over1000 .slider-box,
+    .main-over10001 .slider-box,
+    .main-12gb .slider-box,
+    .main-8gb .slider-box,
+    .main-81gb .slider-box,
+    .main-6gb .slider-box,
+    .main-61gb .slider-box,
+    .main-tablet1 .slider-box,
+    .main-tablet2 .slider-box,
+    .main-tablet3 .slider-box,
+    .main-tabletUnder1 .slider-box,
+    .main-tabletBetween1 .slider-box,
+    .main-tabletBetween2 .slider-box,
+    .main-tabletOver .slider-box,
+    .main-tablet32gb .slider-box,
+    .main-tablet64gb .slider-box,
+    .main-tablet641gb .slider-box,
+    .main-laptop1 .slider-box,
+    .main-laptop2 .slider-box,
+    .main-laptop3 .slider-box,
+    .main-laptopUnder .slider-box,
+    .main-laptopOver .slider-box,
+    .main-laptopIntelcore .slider-box,
+    .main-laptopIntelcore2 .slider-box,
+    .main-laptopAmdryzen .slider-box,
+    .main-Gaming1 .slider-box,
+    .main-Gaming2 .slider-box,
+    .main-Gaming3 .slider-box,
+    .main-GamingUnder1 .slider-box,
+    .main-GamingUnder2 .slider-box,
+    .main-GamingOver .slider-box,
+    .main-GamingConsole1 .slider-box,
+    .main-GamingConsole2 .slider-box,
+    .main-GamingAccessories1 .slider-box,
+    .main-GamingAccessories2 .slider-box,
+    .main-laptopBetween .slider-box,
+    .main-tv1 .slider-box,
+    .main-tv2 .slider-box,
+    .main-tvUnder .slider-box,
+    .main-tvSmart .slider-box,
+    .main-tvSmart2 .slider-box,
+    .main-tvOver .slider-box,
+    .main-tvNormal .slider-box,
+    .main-tvBetween .slider-box,
+    .more-products .slider-box,
+    .main-GamingBetween9 .slider-box {
+    width: 226px;
+    height: 468px;
+    }
+    .two-boxes {
+        min-width: 83%;
+    }
+    .newsletter {
+        min-width: 83%;
+    } 
+
+    .slider {
+       display: grid;
+       justify-content: space-between;
+       grid-template-columns: 20% 20% 20% 20%;
+       grid-template-rows: 550px;
+       
+    }
+    .options-box {
+        width: 100%;
+    }
+    .slider-2,
+    .slider-offers,
+    .slider-opt1,
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5
+    {
+       width: 100%;
+       display: grid;
+       justify-content: center;
+       grid-template-columns: 26% 26% 26% 26%;
+       grid-template-rows: 550px;
+       max-width: 70%;
+   }
+   .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 40% 40% 40% 40%;
+        grid-template-rows: 550px;
+        margin-left: -37%;
+    }
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5 {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 40% 40% 40% 40%;
+        grid-template-rows: 550px;
+        margin-left: -37%;
+    }
+   .slider-opt1,
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5
+   .main-div .main-content {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.main-div {
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    padding: 2% 0;
+}
+
+.main-div .select-bar {
+    width: 22%;
+    margin-right: 0;
+    margin-top: 30px;
+}
+
+
+}
+@media(max-width: 1307px){
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 15% 15% 15% 15%;
+        grid-template-rows: 550px;
+        margin-left: -6%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 15% 15% 15% 15%;
+        grid-template-rows: 550px;
+        margin-left: -6%;
+    }
+    footer {
+        padding-bottom: 15px;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 41% 41% 41% 41%;
+        grid-template-rows: 550px;
+        margin-left: -41%;
+    }
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5 {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 41% 41% 41% 41%;
+        grid-template-rows: 550px;
+        margin-left: -41%;
+    }
+}
+@media(max-width: 1231px) {
+    .newsletter {
+        width: 90%;
+    }
+}
+@media(max-width: 1174px) {
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 8% 8% 8% 8%;
+        grid-template-rows: 550px;
+        margin-left: -11%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 8% 8% 8% 8%;
+        grid-template-rows: 550px;
+        margin-left: -15%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 45.5% 45.5% 45.5% 45.5%;
+        grid-template-rows: 550px;
+        margin-left: -55%;
+    }
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5 {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 45.5% 45.5% 45.5% 45.5%;
+        grid-template-rows: 550px;
+        margin-left: -55%;
+    }
+    footer {
+        padding-bottom: 30px;
+    }
+    .two-boxes {
+        width: 88%;
+    }
+    .two-boxes .first-box h2,
+    .two-boxes .second-box h2 {
+        font-size: 18px;
+    }
+}
+@media(max-width: 1135px) {
+    .newsletter-box {
+        min-width: 75%;
+    }
+    .newsletter-img {
+        display: none;
+    }
+}
+@media(max-width: 1090px) {
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1% 1% 1% 1%;
+        grid-template-rows: 550px;
+        margin-left: -16%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1% 1% 1% 1%;
+        grid-template-rows: 550px;
+        margin-left: -22%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 49% 49% 49% 49%;
+        grid-template-rows: 550px;
+        margin-left: -65%;
+    }
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5 {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 49% 49% 49% 49%;
+        grid-template-rows: 550px;
+        margin-left: -65%;
+    }
+}
+@media(max-width: 1000px) {
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 20% 20% 20% ;
+        grid-template-rows: 550px;
+        margin-left: -9%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 20% 20% 20%;
+        grid-template-rows: 550px;
+        margin-left: -12%;
+    }
+    .different-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 20% 20% 20%;
+        grid-template-rows: 550px;
+        margin-left: -12%;
+    }
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5 {
+        margin-left: -11%;
+    }
+    .grid {
+        justify-content: space-between;
+        grid-template-columns: 20% 20% 20%;
+        grid-template-rows: 550px;
+    }
+    .grid1 {
+        justify-content: space-between;
+        grid-template-columns: 20% 20% 20%;
+        grid-template-rows: 550px;
+    }
+    .home-page {
+        min-width: 90%; 
+        max-height: 300px;
+    }
+    .home-page-icons {
+        width: 80%;
+    }
+    .home-page-icons .icon-box {
+        margin-left: 0px;
+    }
+    .home-page-icons .icon-box p {
+        font-size: 14px;
+    }
+    footer .footer-box.contact {
+        display: none;
+    }
+    footer .footer-box.communication {
+        display: none;
+    }
+    footer .footer-box {
+        display: inline-block;
+        margin: 0 20px;
+        width: 160px;
+        height: 250px;
+    }
+    footer .footer-box h2 {
+        font-size: 20px;
+    }
+    footer .footer-box p {
+        font-size: 14px;
+    }
+    .footer-bar .download-icons {
+        margin-left: 3%;
+    }
+}
+@media(max-width: 940px) {
+    #search {
+        width: 300px;
+    }
+    nav {
+    width: 100%;
+    }
+    .result-box {
+        width: 500px;
+    }
+    nav .cart-account .account {
+        display: none;
+    }
+}
+@media(max-width: 830px) {
+    .home-page-icons {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px;
+    }
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 11% 11% 11% ;
+        grid-template-rows: 550px;
+        margin-left: -17%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 11% 11% 11%;
+        grid-template-rows: 550px;
+        margin-left: -23%;
+    }
+    .different-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 11% 11% 11%;
+        grid-template-rows: 550px;
+        margin-left: -23%;
+    }
+    .slider-opt2,
+    .slider-opt3,
+    .slider-opt4,
+    .slider-opt5 {
+        margin-left: -23%;
+    }
+    .grid {
+        justify-content: space-between;
+        grid-template-columns: 11% 11% 11%;
+        grid-template-rows: 550px;
+    }
+    .grid1 {
+        justify-content: space-between;
+        grid-template-columns: 11% 11% 11%;
+        grid-template-rows: 550px;
+    }
+    .two-boxes {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+    }
+    .two-boxes .first-box,
+    .two-boxes .second-box {
+        width: 90%;
+    }
+    .two-boxes .second-box {
+        margin-left: -2.5px;
+        margin-top: 45px;
+    }
+    .different-opt .dif-opt .options h2 {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .different-opt .dif-opt .options {
+    width: 72%;
+    height: 80px;
+    }
+    .home-page {
+        max-height: 300px;
+    }
+    .home-page .home-page-pictures .picture-box .text-side h2,
+    .home-page .home-page-pictures .picture-box .text-side h1,
+    .home-page .home-page-pictures .picture-box .text-side h3 {
+        font-size: 22px;
+    }
+    
+}
+@media(max-width: 736px){
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 550px;
+        margin-left: -3%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 550px;
+        margin-left: -5%;
+    }
+    .different-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 550px;
+        margin-left: -8%;
+    }
+    .grid {
+        justify-content: space-between;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 550px;
+        margin-left: -5%;
+    }
+    .grid1 {
+        justify-content: space-between;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 550px;
+        margin-left: -5%;
+    }
+    .different-opt .dif-opt .options {
+        width: 100%;
+        border-bottom: 0;
+    }
+    .navbar {
+        margin-bottom: 10px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        padding-left: 30px;
+        position: relative;
+    }
+    nav .logo-search {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav {
+        position: relative;
+    }
+    nav .cart {
+        position: absolute;
+        top: -5px;
+        right: 0;
+    }
+    nav .logo-search .search-bar {
+        width: 95%;
+        margin-top: 15px;
+        padding: 0 20px;
+        position: relative;
+    }
+    nav .logo-search .search-bar i {
+        position: absolute;
+        right: 10px;
+    }
+    header .products-bar {
+        display: flex;
+    }
+    header .bar-option {
+        display: none;
+    }
+    .select-menu {
+        display: none;
+    }
+    nav .collapsible-bar {
+        position: absolute;
+        left: 35px;
+        top: 4px;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    nav .logo {
+        margin-left: 60px;
+    }
+    header {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        top: 90px;
+        left: -380px;
+        width: 350px;
+        height: 600px;
+        z-index: 10000;
+        padding-left: 3%;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: .5s ease;
+    }
+    header.activ {
+        left: 0;
+    }
+
+    header .products-bar {
+       display: block;
+    }
+    header .products-bar .select-menu {
+        display: block;
+     }
+    header .products-bar .bar-option  {
+        display: block;
+    }
+    header .products-bar .bar-option h2 a   {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    header .products-bar .sBtn-text {
+        display: none;
+    }
+    header .products-bar .options {
+        display: block;
+    }
+    header .slide-opt {
+        width: 100%;
+        padding-left: 8%;
+        padding-top: 12%;
+        position: relative;
+        display: block;
+    }
+    header .slide-opt span {
+        position: absolute;
+        top: 15px;
+        right: -25px;
+        width: 35px;
+        height: 45px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #c00033;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    header .slide-opt span i {
+        color: #fff;
+        margin-right: -5px;
+        font-size: 20px;
+        transition: .5s ease;
+    }
+    header .slide-opt span i:hover {
+        transform: rotate(180deg);
+    }
+    header .slide-opt li {
+        list-style: none;
+        margin: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+    header .slide-opt li a {
+        font-size: 18px;
+        color: #fff;
+    }
+    header .slide-opt li i {
+        color: #fff;
+    }
+    .different-opt .dif-opt .options {
+       max-width: 90%;
+    }
+    .newsletter .newsletter-box .newsletter-input input {
+        width: 50%;
+    }
+    .different-opt .dif-opt .options h2 {
+        font-size: 14px;
+    }
+}  
+.collapsible-bar {
+    display: none;
+} 
+
+@media (max-width: 617px) {
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 35% 35%;
+        grid-template-rows: 550px;
+        margin-left: -13%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 35% 35%;
+        grid-template-rows: 550px;
+        margin-left: -17%;
+    }
+    .different-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 35% 35%;
+        grid-template-rows: 550px;
+        margin-left: -20%;
+    }
+    .grid {
+        justify-content: space-between;
+        grid-template-columns: 35% 35%;
+        grid-template-rows: 550px;
+        margin-left: -20%;
+    }
+    .grid1 {
+        justify-content: space-between;
+        grid-template-columns: 35% 35%;
+        grid-template-rows: 550px;
+        margin-left: -20%;
+    }
+    .home-page {
+        min-width: 100%;
+        max-height: 270px;
+    }
+    .two-boxes {
+        min-width: 100%
+    }
+    .footer-bar {
+        flex-direction: column;
+        align-items: start;
+        padding-bottom: 25px;
+    }  
+    .footer-bar .download-icons {
+        margin-top: 20px;
+    }  
+    footer {
+        flex-direction: column;
+        padding-left: 7%;
+        align-items: start;
+    }
+    footer .footer-box {
+        width: 70%;
+    }
+    footer .footer-box h2 {
+        font-size: 26px;
+    }
+    footer .footer-box p {
+        font-size: 17px;
+    }
+    .promo-text {
+        margin-top: 25px;
+    }
+    
+}
+@media (max-width: 556px) {
+    .different-opt .dif-opt .options {
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+        grid-template-rows: 70px;
+    }
+    .different-opt .dif-opt .options .changePro1.fryer {
+        max-width: 80px;
+    }
+    .different-opt .dif-opt .options .changePro2.tv {
+        max-width: 100px;
+    }
+    .different-opt .dif-opt .options .changePro3.laptop {
+        max-width: 80px;
+    }
+    .home-page-icons {
+        max-width: 95%;
+        margin-left: 6%;
+    }
+    .home-page-icons .icon-box {
+        max-width: 200px;
+    }
+    .home-page .home-page-pictures .picture-box .text-side h2,
+    .home-page .home-page-pictures .picture-box .text-side h3,
+    .home-page .home-page-pictures .picture-box .text-side h1 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 32% 32%;
+        grid-template-rows: 550px;
+        margin-left: -17%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 32% 32%;
+        grid-template-rows: 550px;
+        margin-left: -23%;
+    }
+    .different-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt {
+        width: 100%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 32% 32%;
+        grid-template-rows: 550px;
+        margin-left: -23%;
+    }
+    .grid {
+        justify-content: space-between;
+        grid-template-columns: 32% 32%;
+        grid-template-rows: 550px;
+        margin-left: -23%;
+    }
+    .grid1 {
+        justify-content: space-between;
+        grid-template-columns: 32% 32%;
+        grid-template-rows: 550px;
+        margin-left: -23%;
+    }
+
+    .slider .slider-box,
+    .slider-2 .slider-box,
+    .slider-opt1 .slider-box,
+    .slider-opt3 .slider-box,
+    .slider-opt2 .slider-box,
+    .slider-opt4 .slider-box,
+    .slider-opt5 .slider-box,
+    .slider-offers .slider-box,
+    .main-products1 .slider-box,
+    .main-products2 .slider-box,
+    .main-products3 .slider-box,
+    .main-products4 .slider-box,
+    .main-under21 .slider-box,
+    .main-under22 .slider-box,
+    .main-between200 .slider-box,
+    .main-between2001 .slider-box,
+    .main-between58 .slider-box,
+    .main-between581 .slider-box,
+    .main-over1000 .slider-box,
+    .main-over10001 .slider-box,
+    .main-12gb .slider-box,
+    .main-8gb .slider-box,
+    .main-81gb .slider-box,
+    .main-6gb .slider-box,
+    .main-61gb .slider-box,
+    .main-tablet1 .slider-box,
+    .main-tablet2 .slider-box,
+    .main-tablet3 .slider-box,
+    .main-tabletUnder1 .slider-box,
+    .main-tabletBetween1 .slider-box,
+    .main-tabletBetween2 .slider-box,
+    .main-tabletOver .slider-box,
+    .main-tablet32gb .slider-box,
+    .main-tablet64gb .slider-box,
+    .main-tablet641gb .slider-box,
+    .main-laptop1 .slider-box,
+    .main-laptop2 .slider-box,
+    .main-laptop3 .slider-box,
+    .main-laptopUnder .slider-box,
+    .main-laptopOver .slider-box,
+    .main-laptopIntelcore .slider-box,
+    .main-laptopIntelcore2 .slider-box,
+    .main-laptopAmdryzen .slider-box,
+    .main-Gaming1 .slider-box,
+    .main-Gaming2 .slider-box,
+    .main-Gaming3 .slider-box,
+    .main-GamingUnder1 .slider-box,
+    .main-GamingUnder2 .slider-box,
+    .main-GamingOver .slider-box,
+    .main-GamingConsole1 .slider-box,
+    .main-GamingConsole2 .slider-box,
+    .main-GamingAccessories1 .slider-box,
+    .main-GamingAccessories2 .slider-box,
+    .main-laptopBetween .slider-box,
+    .main-tv1 .slider-box,
+    .main-tv2 .slider-box,
+    .main-tvUnder .slider-box,
+    .main-tvSmart .slider-box,
+    .main-tvSmart2 .slider-box,
+    .main-tvOver .slider-box,
+    .main-tvNormal .slider-box,
+    .main-tvBetween .slider-box,
+    .more-products .slider-box,
+    .main-GamingBetween9 .slider-box {
+    width: 210px;
+    height: 458px;
+    }
+    .result-box {
+        max-width: 400px;
+    }
+    .card {
+        width: 100%;
+        z-index: 1000001;
+    }
+    .active .card {
+        left: calc(100% - 100%);
+    }
+
+}
+@media (max-width: 491px) {
+    .two-boxes .first-box h2,
+    .two-boxes .second-box h2  {
+        font-size: 17px;
+        line-height: 25px;
+        font-weight: 500;
+    }
+    .two-boxes .first-box .lego-logo,
+    .two-boxes .second-box .huawei-logo {
+        width: 50px;
+        height: 50px;
+    }
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -22.5%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -32.5%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -33.5%;
+    }
+    .grid {
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -33.5%;
+    }
+    .grid1 {
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -33.5%;
+    }
+    .different-opt .dif-opt .options {
+        display: grid;
+        grid-template-columns: 37% 37% 37%;
+        grid-template-rows: 70px;
+    }
+    .home-page-icons .open-bx {
+        padding-top: 30px;
+    }
+    .home-page-icons .seif {
+        padding-top: 30px;
+    }
+    .home-page-icons .icon-box .icon-text{
+    border: 0;
+    }
+    .newsletter .newsletter-box .newsletter-input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .newsletter .newsletter-box .newsletter-input input {
+        width: 100%;
+    }
+    .newsletter .newsletter-box .newsletter-input button {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0px;
+    }
+    .result-box {
+        width: 100%;
+    }
+
+    .slider .slider-box,
+    .slider-2 .slider-box,
+    .slider-opt1 .slider-box,
+    .slider-opt3 .slider-box,
+    .slider-opt2 .slider-box,
+    .slider-opt4 .slider-box,
+    .slider-opt5 .slider-box,
+    .slider-offers .slider-box,
+    .main-products1 .slider-box,
+    .main-products2 .slider-box,
+    .main-products3 .slider-box,
+    .main-products4 .slider-box,
+    .main-under21 .slider-box,
+    .main-under22 .slider-box,
+    .main-between200 .slider-box,
+    .main-between2001 .slider-box,
+    .main-between58 .slider-box,
+    .main-between581 .slider-box,
+    .main-over1000 .slider-box,
+    .main-over10001 .slider-box,
+    .main-12gb .slider-box,
+    .main-8gb .slider-box,
+    .main-81gb .slider-box,
+    .main-6gb .slider-box,
+    .main-61gb .slider-box,
+    .main-tablet1 .slider-box,
+    .main-tablet2 .slider-box,
+    .main-tablet3 .slider-box,
+    .main-tabletUnder1 .slider-box,
+    .main-tabletBetween1 .slider-box,
+    .main-tabletBetween2 .slider-box,
+    .main-tabletOver .slider-box,
+    .main-tablet32gb .slider-box,
+    .main-tablet64gb .slider-box,
+    .main-tablet641gb .slider-box,
+    .main-laptop1 .slider-box,
+    .main-laptop2 .slider-box,
+    .main-laptop3 .slider-box,
+    .main-laptopUnder .slider-box,
+    .main-laptopOver .slider-box,
+    .main-laptopIntelcore .slider-box,
+    .main-laptopIntelcore2 .slider-box,
+    .main-laptopAmdryzen .slider-box,
+    .main-Gaming1 .slider-box,
+    .main-Gaming2 .slider-box,
+    .main-Gaming3 .slider-box,
+    .main-GamingUnder1 .slider-box,
+    .main-GamingUnder2 .slider-box,
+    .main-GamingOver .slider-box,
+    .main-GamingConsole1 .slider-box,
+    .main-GamingConsole2 .slider-box,
+    .main-GamingAccessories1 .slider-box,
+    .main-GamingAccessories2 .slider-box,
+    .main-laptopBetween .slider-box,
+    .main-tv1 .slider-box,
+    .main-tv2 .slider-box,
+    .main-tvUnder .slider-box,
+    .main-tvSmart .slider-box,
+    .main-tvSmart2 .slider-box,
+    .main-tvOver .slider-box,
+    .main-tvNormal .slider-box,
+    .main-tvBetween .slider-box,
+    .more-products .slider-box,
+    .main-GamingBetween9 .slider-box {
+    width: 170px;
+    height: 458px;
+    }
+    .slider .slider-box .slider-text,
+.slider-2 .slider-box .slider-text,
+.slider-opt1 .slider-box .slider-text,
+.slider-opt2 .slider-box .slider-text,
+.slider-opt3 .slider-box .slider-text,
+.slider-opt4 .slider-box .slider-text,
+.slider-opt5 .slider-box .slider-text,
+.slider-offers .slider-box .slider-text,
+.main-products1 .slider-box .slider-text,
+.main-products2 .slider-box .slider-text,
+.main-products3 .slider-box .slider-text,
+.main-products4 .slider-box .slider-text,
+.main-under21 .slider-box .slider-text,
+.main-under22 .slider-box .slider-text,
+.main-between200 .slider-box .slider-text,
+.main-between2001 .slider-box .slider-text,
+.main-between58 .slider-box .slider-text,
+.main-between581 .slider-box .slider-text,
+.main-over1000 .slider-box .slider-text,
+.main-over10001 .slider-box .slider-text,
+.main-12gb .slider-box .slider-text,
+.main-8gb .slider-box .slider-text,
+.main-81gb .slider-box .slider-text,
+.main-6gb .slider-box .slider-text,
+.main-61gb .slider-box .slider-text,
+.main-tablet1 .slider-box .slider-text,
+.main-tablet2 .slider-box .slider-text,
+.main-tablet3 .slider-box .slider-text,
+.main-tabletUnder1 .slider-box .slider-text,
+.main-tabletBetween1 .slider-box .slider-text,
+.main-tabletBetween2 .slider-box .slider-text,
+.main-tabletOver .slider-box .slider-text,
+.main-tablet32gb .slider-box .slider-text,
+.main-tablet64gb .slider-box .slider-text,
+.main-tablet641gb .slider-box .slider-text,
+.main-laptop1 .slider-box .slider-text,
+.main-laptop2 .slider-box .slider-text,
+.main-laptop3 .slider-box .slider-text,
+.main-laptopUnder .slider-box .slider-text,
+.main-laptopOver .slider-box .slider-text,
+.main-laptopIntelcore .slider-box .slider-text,
+.main-laptopIntelcore2 .slider-box .slider-text,
+.main-laptopAmdryzen .slider-box .slider-text,
+.main-laptopBetween .slider-box .slider-text,
+.main-laptopBetween .slider-box .slider-text,
+.main-Gaming1 .slider-box .slider-text,
+.main-Gaming2 .slider-box .slider-text,
+.main-Gaming3 .slider-box .slider-text,
+.main-GamingUnder1 .slider-box .slider-text,
+.main-GamingUnder2 .slider-box .slider-text,
+.main-GamingOver .slider-box .slider-text,
+.main-GamingConsole1 .slider-box .slider-text,
+.main-GamingConsole2 .slider-box .slider-text,
+.main-GamingAccessories2 .slider-box .slider-text,
+.main-GamingAccessories1 .slider-box .slider-text,
+.main-GamingBetween .slider-box .slider-text,
+.main-tv1 .slider-box .slider-text,
+.main-tv2 .slider-box .slider-text,
+.main-tvUnder .slider-box .slider-text,
+.main-tvSmart .slider-box .slider-text,
+.main-tvSmart2 .slider-box .slider-text,
+.main-tvOver .slider-box .slider-text,
+.main-tvNormal .slider-box .slider-text,
+.more-products .slider-box .slider-text,
+.main-tvBetween .slider-box .slider-text
+{
+    position: absolute;
+    bottom: 30px;
+    height: 47%;
+    width: 90%;
+}
+.slider .item .valueImg,
+.slider-2 .item .valueImg,
+.slider-opt1 .item .valueImg,
+.slider-opt2 .item .valueImg,
+.slider-opt3 .item .valueImg,
+.slider-opt4 .item .valueImg,
+.slider-opt5 .item .valueImg,
+.slider-offers .item .valueImg,
+.main-products1 .item .valueImg,
+.main-products2 .item .valueImg,
+.main-products3 .item .valueImg,
+.main-products4 .item .valueImg,
+.main-under21 .item .valueImg,
+.main-under22 .item .valueImg,
+.main-between200 .item .valueImg,
+.main-between2001 .item .valueImg,
+.main-between58 .item .valueImg,
+.main-between581 .item .valueImg,
+.main-over1000 .item .valueImg,
+.main-over10001 .item .valueImg,
+.main-12gb .item .valueImg,
+.main-8gb .item .valueImg,
+.main-81gb .item .valueImg,
+.main-6gb .item .valueImg,
+.main-61gb .item .valueImg,
+.main-tablet1 .item .valueImg,
+.main-tablet2 .item .valueImg,
+.main-tablet3 .item .valueImg,
+.main-tabletUnder1 .item .valueImg,
+.main-tabletBetween1 .item .valueImg,
+.main-tabletBetween2 .item .valueImg,
+.main-tabletOver .item .valueImg,
+.main-tablet32gb .item .valueImg,
+.main-tablet64gb .item .valueImg,
+.main-tablet641gb .item .valueImg,
+.main-laptop1 .item .valueImg,
+.main-laptop2 .item .valueImg,
+.main-laptop3 .item .valueImg,
+.main-laptopUnder .item .valueImg,
+.main-laptopOver .item .valueImg,
+.main-laptopIntelcore .item .valueImg,
+.main-laptopIntelcore2 .item .valueImg,
+.main-laptopAmdryzen .item .valueImg,
+.main-laptopBetween .item .valueImg,
+.main-Gaming1 .item .valueImg,
+.main-Gaming2 .item .valueImg,
+.main-Gaming3 .item .valueImg,
+.main-GamingUnder1 .item .valueImg,
+.main-GamingUnder2 .item .valueImg,
+.main-GamingOver .item .valueImg,
+.main-GamingConsole1 .item .valueImg,
+.main-GamingConsole2 .item .valueImg,
+.main-GamingAccessories1 .item .valueImg,
+.main-GamingAccessories2 .item .valueImg,
+.main-GamingBetween .item .valueImg,
+.main-tv1 .item .valueImg,
+.main-tv2 .item .valueImg,
+.main-tvUnder .item .valueImg,
+.main-tvSmart .item .valueImg,
+.main-tvSmart2 .item .valueImg,
+.main-tvOver .item .valueImg,
+.main-tvNormal .item .valueImg,
+.more-products .valueImg,
+.main-tvBetween .item .valueImg
+{
+   width: 100%;
+   height: 45%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.slider .item .in-stock,
+.slider-2 .item .in-stock,
+.slider-opt1 .item .in-stock,
+.slider-opt2 .item .in-stock,
+.slider-opt3 .item .in-stock,
+.slider-opt4 .item .in-stock,
+.slider-opt5 .item .in-stock,
+.slider-offers .item .in-stock,
+.main-products1 .item .in-stock,
+.main-products2 .item .in-stock,
+.main-products3 .item .in-stock,
+.main-products4 .item .in-stock,
+.main-under21 .item .in-stock,
+.main-under22 .item .in-stock,
+.main-between200 .item .in-stock,
+.main-between2001 .item .in-stock,
+.main-between58 .item .in-stock,
+.main-between581 .item .in-stock,
+.main-over1000 .item .in-stock,
+.main-over10001 .item .in-stock,
+.main-12gb .item .in-stock,
+.main-8gb .item .in-stock,
+.main-81gb .item .in-stock,
+.main-6gb .item .in-stock,
+.main-61gb .item .in-stock,
+.main-tablet1 .item .in-stock,
+.main-tablet2 .item .in-stock,
+.main-tablet3 .item .in-stock,
+.main-tabletUnder1 .item .in-stock,
+.main-tabletBetween1 .item .in-stock,
+.main-tabletBetween2 .item .in-stock,
+.main-tabletOver .item .in-stock,
+.main-tablet32gb .item .in-stock,
+.main-tablet64gb .item .in-stock,
+.main-tablet641gb .item .in-stock,
+.main-laptop1 .item .in-stock,
+.main-laptop2 .item .in-stock,
+.main-laptop3 .item .in-stock,
+.main-laptopUnder .item .in-stock,
+.main-laptopOver .item .in-stock,
+.main-laptopIntelcore .item .in-stock,
+.main-laptopIntelcore2 .item .in-stock,
+.main-laptopAmdryzen .item .in-stock,
+.main-laptopBetween .item .in-stock,
+.main-Gaming1 .item .in-stock,
+.main-Gaming2 .item .in-stock,
+.main-Gaming3 .item .in-stock,
+.main-GamingUnder1 .item .in-stock,
+.main-GamingUnder2 .item .in-stock,
+.main-GamingOver .item .in-stock,
+.main-GamingConsole1 .item .in-stock,
+.main-GamingConsole2 .item .in-stock,
+.main-GamingAccessories1 .item .in-stock,
+.main-GamingAccessories2 .item .in-stock,
+.main-GamingBetween .item .in-stock,
+.main-tv1 .item .in-stock,
+.main-tv2 .item .in-stock,
+.main-tvUnder .item .in-stock,
+.main-tvSmart .item .in-stock,
+.main-tvSmart2 .item .in-stock,
+.main-tvOver .item .in-stock,
+.main-tvNormal .item .in-stock,
+.more-products .in-stock,
+.main-tvBetween .item .in-stock
+{
+   color: green;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   position: absolute;
+   top: 43%;
+   
+}
+
+
+.slider .item .stars,
+.slider-2 .item .stars,
+.slider-opt1 .item .stars,
+.slider-opt2 .item .stars,
+.slider-opt3 .item .stars,
+.slider-opt4 .item .stars,
+.slider-opt5 .item .stars,
+.slider-offers .item .stars,
+.main-products1 .item .stars,
+.main-products2 .item .stars,
+.main-products3 .item .stars,
+.main-products4 .item .stars,
+.main-under21 .item .stars,
+.main-under22 .item .stars,
+.main-between200 .item .stars,
+.main-between2001 .item .stars,
+.main-between58 .item .stars,
+.main-between581 .item .stars,
+.main-over1000 .item .stars,
+.main-over10001 .item .stars,
+.main-12gb .item .stars,
+.main-8gb .item .stars,
+.main-81gb .item .stars,
+.main-6gb .item .stars,
+.main-61gb .item .stars,
+.main-tablet1 .item .stars,
+.main-tablet2 .item .stars,
+.main-tablet3 .item .stars,
+.main-tabletUnder1 .item .stars,
+.main-tabletBetween1 .item .stars,
+.main-tabletBetween2 .item .stars,
+.main-tabletOver .item .stars,
+.main-tablet32gb .item .stars,
+.main-tablet64gb .item .stars,
+.main-tablet641gb .item .stars,
+.main-laptop1 .item .stars,
+.main-laptop2 .item .stars,
+.main-laptop3 .item .stars,
+.main-laptopUnder .item .stars,
+.main-laptopOver .item .stars,
+.main-laptopIntelcore .item .stars,
+.main-laptopIntelcore2 .item .stars,
+.main-laptopAmdryzen .item .stars,
+.main-laptopBetween .item .stars,
+.main-Gaming1 .item .stars,
+.main-Gaming2 .item .stars,
+.main-Gaming3 .item .stars,
+.main-GamingUnder1 .item .stars,
+.main-GamingUnder2 .item .stars,
+.main-GamingOver .item .stars,
+.main-GamingConsole1 .item .stars,
+.main-GamingConsole2 .item .stars,
+.main-GamingAccessories2 .item .stars,
+.main-GamingAccessories1 .item .stars,
+.main-GamingBetween .item .stars,
+.main-tv1 .item .stars,
+.main-tv2 .item .stars,
+.main-tvUnder .item .stars,
+.main-tvSmart .item .stars,
+.main-tvSmart2 .item .stars,
+.main-tvOver .item .stars,
+.main-tvNormal .item .stars,
+.more-products .stars,
+.main-tvBetween .item .stars
+{
+    position: absolute;
+    top: 52%;
+}
+
+
+
+.slider .item .price-cut,
+.slider-2 .item .price-cut,
+.slider-opt1 .item .price-cut,
+.slider-opt2 .item .price-cut,
+.slider-opt3 .item .price-cut,
+.slider-opt4 .item .price-cut,
+.slider-opt5 .item .price-cut,
+.slider-offers .item .price-cut,
+.main-products1 .item .price-cut,
+.main-products2 .item .price-cut,
+.main-products3 .item .price-cut,
+.main-products4 .item .price-cut,
+.main-under21 .item .price-cut,
+.main-under22 .item .price-cut,
+.main-between200 .item .price-cut,
+.main-between2001 .item .price-cut,
+.main-between58 .item .price-cut,
+.main-between581 .item .price-cut,
+.main-over1000 .item .price-cut,
+.main-over10001 .item .price-cut,
+.main-12gb .item .price-cut,
+.main-8gb .item .price-cut,
+.main-81gb .item .price-cut,
+.main-6gb .item .price-cut,
+.main-61gb .item .price-cut,
+.main-tablet1 .item .price-cut,
+.main-tablet2 .item .price-cut,
+.main-tablet3 .item .price-cut,
+.main-tabletUnder1 .item .price-cut,
+.main-tabletBetween1 .item .price-cut,
+.main-tabletBetween2 .item .price-cut,
+.main-tabletOver .item .price-cut,
+.main-tablet32gb .item .price-cut,
+.main-tablet64gb .item .price-cut,
+.main-tablet641gb .item .price-cut,
+.main-laptop1 .item .price-cut,
+.main-laptop2 .item .price-cut,
+.main-laptop3 .item .price-cut,
+.main-laptopUnder .item .price-cut,
+.main-laptopOver .item .price-cut,
+.main-laptopIntelcore .item .price-cut,
+.main-laptopIntelcore2 .item .price-cut,
+.main-laptopAmdryzen .item .price-cut,
+.main-laptopBetween .item .price-cut,
+.main-Gaming1 .item .price-cut,
+.main-Gaming2 .item .price-cut,
+.main-Gaming3 .item .price-cut,
+.main-GamingUnder1 .item .price-cut,
+.main-GamingUnder2 .item .price-cut,
+.main-GamingOver .item .price-cut,
+.main-GamingConsole1 .item .price-cut,
+.main-GamingConsole2 .item .price-cut,
+.main-GamingAccessories1 .item .price-cut,
+.main-GamingAccessories2 .item .price-cut,
+.main-GamingBetween .item .price-cut,
+.main-tv1 .item .price-cut,
+.main-tv2 .item .price-cut,
+.main-tvUnder .item .price-cut,
+.main-tvSmart .item .price-cut,
+.main-tvSmart2 .item .price-cut,
+.main-tvOver .item .price-cut,
+.main-tvNormal .item .price-cut,
+.more-products .price-cut,
+.main-tvBetween .item .price-cut
+{
+   display: flex;
+   align-items: center;
+   margin-top: 7px;
+   position: absolute;
+   top: 59%;
+}
+
+.slider .item .actuall-price,
+.slider-2 .item .actuall-price,
+.slider-opt1 .actuall-price,
+.slider-opt2 .actuall-price,
+.slider-opt3 .actuall-price,
+.slider-opt4 .actuall-price,
+.slider-opt5 .actuall-price,
+.slider-offers .actuall-price,
+.main-products1 .actuall-price,
+.main-products2 .actuall-price,
+.main-products3 .actuall-price,
+.main-products4 .actuall-price,
+.main-under21 .actuall-price,
+.main-under22 .actuall-price,
+.main-between200 .actuall-price,
+.main-between2001 .actuall-price,
+.main-between58 .actuall-price,
+.main-between581 .actuall-price,
+.main-over1000 .actuall-price,
+.main-over10001 .actuall-price,
+.main-12gb .actuall-price,
+.main-8gb .actuall-price,
+.main-81gb .actuall-price,
+.main-6gb .actuall-price,
+.main-61gb .actuall-price,
+.main-tablet1 .actuall-price,
+.main-tablet2 .actuall-price,
+.main-tablet3 .actuall-price,
+.main-tabletUnder1 .actuall-price,
+.main-tabletBetween1 .actuall-price,
+.main-tabletBetween2 .actuall-price,
+.main-tabletOver .actuall-price,
+.main-tablet32gb .actuall-price,
+.main-tablet64gb .actuall-price,
+.main-tablet641gb .actuall-price,
+.main-laptop1 .actuall-price,
+.main-laptop2 .actuall-price,
+.main-laptop3 .actuall-price,
+.main-laptopUnder .actuall-price,
+.main-laptopOver .actuall-price,
+.main-laptopIntelcore .actuall-price,
+.main-laptopIntelcore2 .actuall-price,
+.main-laptopAmdryzen .actuall-price,
+.main-laptopBetween .actuall-price,
+.main-Gaming1 .actuall-price,
+.main-Gaming2 .actuall-price,
+.main-Gaming3 .actuall-price,
+.main-GamingUnder1 .actuall-price,
+.main-GamingUnder2 .actuall-price,
+.main-GamingOver .actuall-price,
+.main-GamingConsole1 .actuall-price,
+.main-GamingConsole2 .actuall-price,
+.main-GamingAccessories1 .actuall-price,
+.main-GamingAccessories2 .actuall-price,
+.main-GamingBetween .actuall-price,
+.main-tv1 .actuall-price,
+.main-tv2 .actuall-price,
+.main-tvUnder .actuall-price,
+.main-tvSmart .actuall-price,
+.main-tvSmart2 .actuall-price,
+.main-tvOver .actuall-price,
+.main-tvNormal .actuall-price,
+.more-products .actuall-price,
+.main-tvBetween .actuall-price
+{
+   top: 71%;
+}
+
+
+.slider .item button,
+.slider-2 .item button,
+.slider-opt1 .item button,
+.slider-opt2 .item button,
+.slider-opt3 .item button,
+.slider-opt4 .item button,
+.slider-opt5 .item button,
+.slider-offers .item button,
+.main-products1 .item button,
+.main-products2 .item button,
+.main-products3 .item button,
+.main-products4 .item button,
+.main-under21 .item button,
+.main-under22 .item button,
+.main-between200 .item button,
+.main-between2001 .item button,
+.main-between58 .item button, 
+.main-between581 .item button, 
+.main-over1000 .item button,
+.main-over10001 .item button, 
+.main-12gb .item button, 
+.main-8gb .item button, 
+.main-81gb .item button, 
+.main-6gb .item button, 
+.main-61gb .item button,
+.main-tablet1 .item button,
+.main-tablet2 .item button,
+.main-tablet3 .item button,
+.main-tabletUnder1  .item button,
+.main-tabletBetween1 .item button,
+.main-tabletBetween2 .item button,
+.main-tabletOver .item button,
+.main-tablet32gb .item button,
+.main-tablet64gb .item button,
+.main-tablet641gb .item button,
+.main-laptop1 .item button,
+.main-laptop2 .item button,
+.main-laptop3 .item button,
+.main-laptopUnder .item button,
+.main-laptopOver .item button,
+.main-laptopIntelcore .item button,
+.main-laptopIntelcore2 .item button,
+.main-laptopAmdryzen .item button,
+.main-laptopBetween .item button,
+.main-Gaming1 .item button,
+.main-Gaming2 .item button,
+.main-Gaming3 .item button,
+.main-GamingUnder1 .item button,
+.main-GamingUnder2 .item button,
+.main-GamingOver .item button,
+.main-GamingConsole1 .item button,
+.main-GamingConsole2 .item button,
+.main-GamingAccessories1 .item button,
+.main-GamingAccessories2 .item button,
+.main-GamingBetween .item button,
+.main-tv1 .item button,
+.main-tv2 .item button,
+.main-tvUnder .item button,
+.main-tvSmart .item button,
+.main-tvSmart2 .item button,
+.main-tvOver .item button,
+.main-tvNormal .item button,
+.more-products button,
+.main-tvBetween .item button
+{
+   top: 90%;
+   margin: 0;
+}
+.slider .item .heartBtn,
+.slider-2 .item .heartBtn,
+.slider-opt1 .item .heartBtn,
+.slider-opt2 .item .heartBtn,
+.slider-opt3 .item .heartBtn,
+.slider-opt4 .item .heartBtn,
+.slider-opt5 .item .heartBtn,
+.slider-offers .item .heartBtn,
+.main-products1 .item .heartBtn,
+.main-products2 .item .heartBtn,
+.main-products3 .item .heartBtn,
+.main-products4 .item .heartBtn,
+.main-under21 .item .heartBtn,
+.main-under22 .item .heartBtn,
+.main-between200 .item .heartBtn,
+.main-between2001 .item .heartBtn,
+.main-between58 .item .heartBtn,
+.main-between581 .item .heartBtn,
+.main-over1000 .item .heartBtn,
+.main-over10001 .item .heartBtn,
+.main-12gb .item .heartBtn,
+.main-8gb .item .heartBtn,
+.main-81gb .item .heartBtn,
+.main-6gb .item .heartBtn,
+.main-61gb .item .heartBtn,
+.main-tablet1 .item .heartBtn,
+.main-tablet2 .item .heartBtn,
+.main-tablet3 .item .heartBtn,
+.main-tabletUnder1 .item .heartBtn,
+.main-tabletBetween1 .item .heartBtn,
+.main-tabletBetween2 .item .heartBtn,
+.main-tabletOver .item .heartBtn,
+.main-tablet32gb .item .heartBtn,
+.main-tablet64gb .item .heartBtn,
+.main-tablet641gb .item .heartBtn,
+.main-laptop1 .item .heartBtn,
+.main-laptop2 .item .heartBtn,
+.main-laptop3 .item .heartBtn,
+.main-laptopUnder .item .heartBtn,
+.main-laptopOver .item .heartBtn,
+.main-laptopIntelcore .item .heartBtn,
+.main-laptopIntelcore2 .item .heartBtn,
+.main-laptopAmdryzen .item .heartBtn,
+.main-laptopBetween .item .heartBtn,
+.main-Gaming1 .item .heartBtn,
+.main-Gaming2 .item .heartBtn,
+.main-Gaming3 .item .heartBtn,
+.main-GamingUnder1 .item .heartBtn,
+.main-GamingUnder2 .item .heartBtn,
+.main-GamingOver .item .heartBtn,
+.main-GamingConsole1 .item .heartBtn,
+.main-GamingConsole2 .item .heartBtn,
+.main-GamingAccessories1 .item .heartBtn,
+.main-GamingAccessories2 .item .heartBtn,
+.main-GamingBetween .item .heartBtn,
+.main-tv1 .item .heartBtn,
+.main-tv2 .item .heartBtn,
+.main-tvUnder .item .heartBtn,
+.main-tvSmart .item .heartBtn,
+.main-tvSmart2 .item .heartBtn,
+.main-tvOver .item .heartBtn,
+.main-tvNormal .item .heartBtn,
+.more-products .heartBtn,
+.main-tvBetween .item .heartBtn
+{
+   left: 8px;
+   top: 5px;
+}
+header {
+    width: 300px;
+}
+.two-boxes  {
+    min-width: 100%;
+}
+}
+@media(max-width: 427px) {
+    .home-page .home-page-pictures .picture-box .text-side h2,
+    .home-page .home-page-pictures .picture-box .text-side h3,
+    .home-page .home-page-pictures .picture-box .text-side h1 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        min-width: 170px;
+        margin-left: -15px;
+    }
+}
+@media(max-width: 405px) {
+    .home-page-icons .icon-box {
+        width: 100%;
+    }
+    .home-page-icons .icon-box p {
+        min-width: 200px;
+    }
+    .home-page-icons {
+        grid-template-columns: 55% 55%;
+        grid-template-rows: 200px;
+        margin-left: -8%;
+    }
+    .different-opt .dif-opt .options {
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        grid-template-rows: 70px;
+    }
+}
+@media(max-width: 390px) {
+    .two-boxes .first-box {
+        display: none;
+    }
+    .slider {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -25%;
+     }
+     .slider-2,
+    .slider-offers
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -35%;
+    }
+    .different-opt .dif-opt .options-box .slider-opt1
+     {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -35%;
+    }
+    .grid {
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -35%;
+    }
+    .grid1 {
+        justify-content: space-between;
+        grid-template-columns: 29% 29%;
+        grid-template-rows: 550px;
+        margin-left: -33.5%;
+    }
+}
+.slide-opt {
+    display: none;
+}
+@media(max-width: 1357px) {
+    .main-div {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        position: relative;
+    }
+    .main-div .select-bar {
+        position: absolute;
+        left: -45%;
+        top: 30px;
+    }
+    .main-div .select-bar h2 {
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        margin-top: 10px;
+    }
+    .main-div .select-bar .select-box {
+        display: flex;
+        margin-bottom: 15px;
+        text-decoration: none;
+    }
+    .main-div .select-bar .select-box p {
+        color: #000;
+        font-weight: 400;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    .main-div .select-bar .select-box p span {
+        margin-left: 4px;
+        color: #999;
+    }
+    .main-div .main-content {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+        margin-right: -4%;
+    }
+}
+@media (max-width: 1357px) {
+    .main-under21,
+ .main-under22,
+ .main-between200,
+ .main-between2001,
+ .main-between58,
+ .main-between581,
+ .main-over1000,
+ .main-over10001,
+ .main-12gb,
+ .main-8gb,
+ .main-81gb,
+ .main-6gb,
+ .main-61gb,
+ .main-tablet1,
+ .main-tablet2,
+ .main-tablet3,
+ .main-tabletUnder1,
+ .main-tabletBetween1,
+ .main-tabletBetween2,
+ .main-tabletOver,
+ .main-tablet32gb,
+ .main-tablet64gb,
+ .main-tablet641gb,
+ .main-laptop1,
+ .main-laptop2,
+ .main-laptop3,
+ .main-laptopUnder,
+ .main-laptopOver,
+ .main-laptopIntelcore,
+ .main-laptopIntelcore2,
+ .main-laptopAmdryzen,
+ .main-laptopBetween,
+ .main-Gaming1,
+ .main-Gaming2,
+ .main-Gaming3,
+ .main-GamingUnder1,
+ .main-GamingUnder2,
+ .main-GamingOver,
+ .main-GamingConsole1,
+ .main-GamingConsole2,
+ .main-GamingAccessories1,
+ .main-GamingAccessories2,
+ .main-GamingBetween,
+ .main-tv1,
+ .main-tv2,
+ .main-tvUnder,
+ .main-tvSmart,
+ .main-tvSmart2,
+ .main-tvOver,
+ .main-tvNormal,
+ .more-products,
+ .main-tvBetween {
+    display: grid;
+        justify-content: space-between;
+        grid-template-columns: 45% 45% 45%;
+        grid-template-rows: 550px;
+        margin-left: -25%;
+ }
+}
+
+@media(max-width: 1263px){
+    .main-products1,
+    .main-products2,
+    .main-products3,
+    .more-products,
+    .main-products4,
+    .main-under21,
+ .main-under22,
+ .main-between200,
+ .main-between2001,
+ .main-between58,
+ .main-between581,
+ .main-over1000,
+ .main-over10001,
+ .main-12gb,
+ .main-8gb,
+ .main-81gb,
+ .main-6gb,
+ .main-61gb,
+ .main-tablet1,
+ .main-tablet2,
+ .main-tablet3,
+ .main-tabletUnder1,
+ .main-tabletBetween1,
+ .main-tabletBetween2,
+ .main-tabletOver,
+ .main-tablet32gb,
+ .main-tablet64gb,
+ .main-tablet641gb,
+ .main-laptop1,
+ .main-laptop2,
+ .main-laptop3,
+ .main-laptopUnder,
+ .main-laptopOver,
+ .main-laptopIntelcore,
+ .main-laptopIntelcore2,
+ .main-laptopAmdryzen,
+ .main-laptopBetween,
+ .main-Gaming1,
+ .main-Gaming2,
+ .main-Gaming3,
+ .main-GamingUnder1,
+ .main-GamingUnder2,
+ .main-GamingOver,
+ .main-GamingConsole1,
+ .main-GamingConsole2,
+ .main-GamingAccessories1,
+ .main-GamingAccessories2,
+ .main-GamingBetween,
+ .main-tv1,
+ .main-tv2,
+ .main-tvUnder,
+ .main-tvSmart,
+ .main-tvSmart2,
+ .main-tvOver,
+ .main-tvNormal,
+ .more-products,
+ .main-tvBetween {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 35% 35% 35px;
+        grid-template-rows: 550px;
+        margin-left: -25%;
+    }
+    .main-div {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        position: relative;
+    }
+    .main-div .select-bar {
+        position: absolute;
+        left: -43%;
+        top: 30px;
+        width: 40%;
+    }
+}
+@media(max-width: 1194px) {
+    .main-products1,
+    .main-products2,
+    .main-products3,
+    .more-products,
+    .main-products4,
+    .main-under21,
+ .main-under22,
+ .main-between200,
+ .main-between2001,
+ .main-between58,
+ .main-between581,
+ .main-over1000,
+ .main-over10001,
+ .main-12gb,
+ .main-8gb,
+ .main-81gb,
+ .main-6gb,
+ .main-61gb,
+ .main-tablet1,
+ .main-tablet2,
+ .main-tablet3,
+ .main-tabletUnder1,
+ .main-tabletBetween1,
+ .main-tabletBetween2,
+ .main-tabletOver,
+ .main-tablet32gb,
+ .main-tablet64gb,
+ .main-tablet641gb,
+ .main-laptop1,
+ .main-laptop2,
+ .main-laptop3,
+ .main-laptopUnder,
+ .main-laptopOver,
+ .main-laptopIntelcore,
+ .main-laptopIntelcore2,
+ .main-laptopAmdryzen,
+ .main-laptopBetween,
+ .main-Gaming1,
+ .main-Gaming2,
+ .main-Gaming3,
+ .main-GamingUnder1,
+ .main-GamingUnder2,
+ .main-GamingOver,
+ .main-GamingConsole1,
+ .main-GamingConsole2,
+ .main-GamingAccessories1,
+ .main-GamingAccessories2,
+ .main-GamingBetween,
+ .main-tv1,
+ .main-tv2,
+ .main-tvUnder,
+ .main-tvSmart,
+ .main-tvSmart2,
+ .main-tvOver,
+ .main-tvNormal,
+ .more-products,
+ .main-tvBetween {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 0% 0% 0%;
+        grid-template-rows: 550px;
+    }
+}
+@media(max-width: 1100px) {
+    .main-products1,
+    .main-products2,
+    .main-products3,
+    .more-products,
+    .main-products4,
+    .main-under21,
+ .main-under22,
+ .main-between200,
+ .main-between2001,
+ .main-between58,
+ .main-between581,
+ .main-over1000,
+ .main-over10001,
+ .main-12gb,
+ .main-8gb,
+ .main-81gb,
+ .main-6gb,
+ .main-61gb,
+ .main-tablet1,
+ .main-tablet2,
+ .main-tablet3,
+ .main-tabletUnder1,
+ .main-tabletBetween1,
+ .main-tabletBetween2,
+ .main-tabletOver,
+ .main-tablet32gb,
+ .main-tablet64gb,
+ .main-tablet641gb,
+ .main-laptop1,
+ .main-laptop2,
+ .main-laptop3,
+ .main-laptopUnder,
+ .main-laptopOver,
+ .main-laptopIntelcore,
+ .main-laptopIntelcore2,
+ .main-laptopAmdryzen,
+ .main-laptopBetween,
+ .main-Gaming1,
+ .main-Gaming2,
+ .main-Gaming3,
+ .main-GamingUnder1,
+ .main-GamingUnder2,
+ .main-GamingOver,
+ .main-GamingConsole1,
+ .main-GamingConsole2,
+ .main-GamingAccessories1,
+ .main-GamingAccessories2,
+ .main-GamingBetween,
+ .main-tv1,
+ .main-tv2,
+ .main-tvUnder,
+ .main-tvSmart,
+ .main-tvSmart2,
+ .main-tvOver,
+ .main-tvNormal,
+ .more-products,
+ .main-tvBetween {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: -50% -50% -50%;
+        grid-template-rows: 550px;
+    }
+    .main-div .main-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+        margin-right: -20%;
+    }
+}
+@media(max-width: 945px) {
+    .main-products1,
+    .main-products2,
+    .main-products3,
+    .more-products,
+    .main-products4,
+    .main-under21,
+ .main-under22,
+ .main-between200,
+ .main-between2001,
+ .main-between58,
+ .main-between581,
+ .main-over1000,
+ .main-over10001,
+ .main-12gb,
+ .main-8gb,
+ .main-81gb,
+ .main-6gb,
+ .main-61gb,
+ .main-tablet1,
+ .main-tablet2,
+ .main-tablet3,
+ .main-tabletUnder1,
+ .main-tabletBetween1,
+ .main-tabletBetween2,
+ .main-tabletOver,
+ .main-tablet32gb,
+ .main-tablet64gb,
+ .main-tablet641gb,
+ .main-laptop1,
+ .main-laptop2,
+ .main-laptop3,
+ .main-laptopUnder,
+ .main-laptopOver,
+ .main-laptopIntelcore,
+ .main-laptopIntelcore2,
+ .main-laptopAmdryzen,
+ .main-laptopBetween,
+ .main-Gaming1,
+ .main-Gaming2,
+ .main-Gaming3,
+ .main-GamingUnder1,
+ .main-GamingUnder2,
+ .main-GamingOver,
+ .main-GamingConsole1,
+ .main-GamingConsole2,
+ .main-GamingAccessories1,
+ .main-GamingAccessories2,
+ .main-GamingBetween,
+ .main-tv1,
+ .main-tv2,
+ .main-tvUnder,
+ .main-tvSmart,
+ .main-tvSmart2,
+ .main-tvOver,
+ .main-tvNormal,
+ .more-products,
+ .main-tvBetween {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 240px 240px 240px;
+        grid-template-rows: 550px;
+    }
+    .main-div .main-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+        margin-right: -15%;
+    }
+    /*
+    .slider .slider-box,
+    .slider-2 .slider-box,
+    .slider-opt1 .slider-box,
+    .slider-opt3 .slider-box,
+    .slider-opt2 .slider-box,
+    .slider-opt4 .slider-box,
+    .slider-opt5 .slider-box,
+    .slider-offers .slider-box,
+    .main-products1 .slider-box,
+    .main-products2 .slider-box,
+    .main-products3 .slider-box,
+    .main-products4 .slider-box,
+    .main-under21 .slider-box,
+    .main-under22 .slider-box,
+    .main-between200 .slider-box,
+    .main-between2001 .slider-box,
+    .main-between58 .slider-box,
+    .main-between581 .slider-box,
+    .main-over1000 .slider-box,
+    .main-over10001 .slider-box,
+    .main-12gb .slider-box,
+    .main-8gb .slider-box,
+    .main-81gb .slider-box,
+    .main-6gb .slider-box,
+    .main-61gb .slider-box,
+    .main-tablet1 .slider-box,
+    .main-tablet2 .slider-box,
+    .main-tablet3 .slider-box,
+    .main-tabletUnder1 .slider-box,
+    .main-tabletBetween1 .slider-box,
+    .main-tabletBetween2 .slider-box,
+    .main-tabletOver .slider-box,
+    .main-tablet32gb .slider-box,
+    .main-tablet64gb .slider-box,
+    .main-tablet641gb .slider-box,
+    .main-laptop1 .slider-box,
+    .main-laptop2 .slider-box,
+    .main-laptop3 .slider-box,
+    .main-laptopUnder .slider-box,
+    .main-laptopOver .slider-box,
+    .main-laptopIntelcore .slider-box,
+    .main-laptopIntelcore2 .slider-box,
+    .main-laptopAmdryzen .slider-box,
+    .main-Gaming1 .slider-box,
+    .main-Gaming2 .slider-box,
+    .main-Gaming3 .slider-box,
+    .main-GamingUnder1 .slider-box,
+    .main-GamingUnder2 .slider-box,
+    .main-GamingOver .slider-box,
+    .main-GamingConsole1 .slider-box,
+    .main-GamingConsole2 .slider-box,
+    .main-GamingAccessories1 .slider-box,
+    .main-GamingAccessories2 .slider-box,
+    .main-laptopBetween .slider-box,
+    .main-tv1 .slider-box,
+    .main-tv2 .slider-box,
+    .main-tvUnder .slider-box,
+    .main-tvSmart .slider-box,
+    .main-tvSmart2 .slider-box,
+    .main-tvOver .slider-box,
+    .main-tvNormal .slider-box,
+    .main-tvBetween .slider-box,
+    .more-products .slider-box,
+    .main-GamingBetween9 .slider-box {
+    width: 226px;
+    height: 468px;
+}*/
+}
+@media(max-width: 925px) {
+    .main-div {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-products1,
+    .main-products2,
+    .main-products3,
+    .more-products,
+    .main-products4,
+    .main-under21,
+ .main-under22,
+ .main-between200,
+ .main-between2001,
+ .main-between58,
+ .main-between581,
+ .main-over1000,
+ .main-over10001,
+ .main-12gb,
+ .main-8gb,
+ .main-81gb,
+ .main-6gb,
+ .main-61gb,
+ .main-tablet1,
+ .main-tablet2,
+ .main-tablet3,
+ .main-tabletUnder1,
+ .main-tabletBetween1,
+ .main-tabletBetween2,
+ .main-tabletOver,
+ .main-tablet32gb,
+ .main-tablet64gb,
+ .main-tablet641gb,
+ .main-laptop1,
+ .main-laptop2,
+ .main-laptop3,
+ .main-laptopUnder,
+ .main-laptopOver,
+ .main-laptopIntelcore,
+ .main-laptopIntelcore2,
+ .main-laptopAmdryzen,
+ .main-laptopBetween,
+ .main-Gaming1,
+ .main-Gaming2,
+ .main-Gaming3,
+ .main-GamingUnder1,
+ .main-GamingUnder2,
+ .main-GamingOver,
+ .main-GamingConsole1,
+ .main-GamingConsole2,
+ .main-GamingAccessories1,
+ .main-GamingAccessories2,
+ .main-GamingBetween,
+ .main-tv1,
+ .main-tv2,
+ .main-tvUnder,
+ .main-tvSmart,
+ .main-tvSmart2,
+ .main-tvOver,
+ .main-tvNormal,
+ .more-products,
+ .main-tvBetween {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 260px 260px;
+        grid-template-rows: 550px;
+    }
+    .main-div .main-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+        margin-right: -3%;
+    }
+}
+@media(max-width: 780px){
+    .main-div .main-content {
+        margin-right: 17%;
+    }
+}
+@media(max-width: 729px) {
+    .main-div {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-products1,
+    .main-products2,
+    .main-products3,
+    .more-products,
+    .main-products4,.main-under21,
+    .main-under22,
+    .main-between200,
+    .main-between2001,
+    .main-between58,
+    .main-between581,
+    .main-over1000,
+    .main-over10001,
+    .main-12gb,
+    .main-8gb,
+    .main-81gb,
+    .main-6gb,
+    .main-61gb,
+    .main-tablet1,
+    .main-tablet2,
+    .main-tablet3,
+    .main-tabletUnder1,
+    .main-tabletBetween1,
+    .main-tabletBetween2,
+    .main-tabletOver,
+    .main-tablet32gb,
+    .main-tablet64gb,
+    .main-tablet641gb,
+    .main-laptop1,
+    .main-laptop2,
+    .main-laptop3,
+    .main-laptopUnder,
+    .main-laptopOver,
+    .main-laptopIntelcore,
+    .main-laptopIntelcore2,
+    .main-laptopAmdryzen,
+    .main-laptopBetween,
+    .main-Gaming1,
+    .main-Gaming2,
+    .main-Gaming3,
+    .main-GamingUnder1,
+    .main-GamingUnder2,
+    .main-GamingOver,
+    .main-GamingConsole1,
+    .main-GamingConsole2,
+    .main-GamingAccessories1,
+    .main-GamingAccessories2,
+    .main-GamingBetween,
+    .main-tv1,
+    .main-tv2,
+    .main-tvUnder,
+    .main-tvSmart,
+    .main-tvSmart2,
+    .main-tvOver,
+    .main-tvNormal,
+    .more-products,
+    .main-tvBetween {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 260px;
+        grid-template-rows: 550px;
+    }
+    .main-div .main-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+        margin-right: -50%;
+    }
+    .main-div .select-bar {
+        left: -37%;
+        width: 70%;
+    }
+}
+@media(max-width: 480px) {
+    .main-products1 .item,
+    .main-products2 .item,
+    .main-products3 .item,
+    .more-products .item,
+    .main-products4 .item {
+        width: 10px;
+    }
+    .main-div .select-bar {
+        left: -45%;
+    }
+    .main-div .main-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4%;
+        margin-right: -35%;
+    }
+    .main-div .select-bar h2 {
+        font-size: 18px;
+    }
+    .main-div .select-bar .select-box p {
+        font-size: 16px;
+    }
+}
+@media(max-width: 1570px) {
+    .product-bbox {
+        min-width: 100%;
+    }
+    .product-bbox .product-info-text {
+        margin-left: 15%;
+    }
+    .product-bbox .product-stars {
+        margin-left: 15%;
+    }
+}
+@media(max-width: 1264px) {
+    .similar-bar {
+        min-width: 100%;
+    }
+    .similar-bar .more-products {
+       margin-left: 0%;
+    }
+}
+@media(max-width: 1090px) {
+    .product-bbox .product-sbox {
+        min-width: 100%;
+    }
+    .product-bbox .product-sbox .product-box {
+        min-width: 100%;
+    }
+    .product-sbox .product-box .product-images {
+        width: 40%;
+    }
+    .similar-bar .more-products {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 550px;
+     }
+     .collap-bar {
+        width: 80%;
+     }
+}
+@media(max-width: 990px) {
+    .product-bbox .product-sbox .product-box  {
+        flex-direction: column;
+    }
+    .product-sbox .product-box  {
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .product-sbox .product-box .product-info {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+    }
+    .product-sbox .product-box .product-images {
+        width: 70%;
+    }
+    .product-sbox .product-box .product-info .the-pp-box {
+        width: 85%;
+    }
+    .product-sbox .product-box .product-info .services-box {
+        width: 80%;
+    }
+}
+@media (max-width: 760px) {
+    .similar-bar .more-products {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 550px;
+     }
+     .product-sbox .product-box .product-info {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 650px) {
+    .product-sbox .product-box .product-images {
+        width: 90%;
+    }
+    .product-sbox .product-box .product-info .the-pp-box {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 545px) {
+    .product-bbox .product-info-text {
+        margin-left: 5%;
+    }
+    .product-bbox .product-stars {
+        margin-left: 5%;
+    }
+    .product-sbox .product-box .product-info .the-pp-box {
+        width: 95%;
+    }
+    .product-sbox .product-box .product-info .services-box {
+        width: 90%;
+    }
+    .collap-bar {
+        width: 80%;
+        margin-left: -8%;
+    }
+}
+@media (max-width: 500px) {
+    .similar-bar .more-products {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 250px;
+        grid-template-rows: 550px;
+     }
+     .more-products .slider-box {
+        width: 250px;
+
+     }
+     .similar-bar .more-products {
+        margin-left: -10%;
+     }
+     .more-products .slider-box .similar-text {
+        left: -20%;
+     }
+}
+@media (max-width: 1180px) {
+    .main-plaptop1.promotions,
+    .main-pbetween200.promotions,
+    .main-ptablet2.promotions,
+    .main-p8gb.promotions,
+    .main-pGamingAccessories1.promotions {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 270px 270px 270px;
+        grid-template-rows: 550px;
+    }
+}
+@media (max-width: 941px) {
+    .back-to {
+        right: 15%;
+        position: fixed;
+    }
+}
+@media(max-width: 830px) {
+    .main-plaptop1.promotions,
+    .main-pbetween200.promotions,
+    .main-ptablet2.promotions,
+    .main-p8gb.promotions,
+    .main-pGamingAccessories1.promotions {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 270px 270px;
+        grid-template-rows: 550px;
+    }
+}
+@media(max-width: 560px) {
+    .main-plaptop1.promotions,
+    .main-pbetween200.promotions,
+    .main-ptablet2.promotions,
+    .main-p8gb.promotions,
+    .main-pGamingAccessories1.promotions {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 270px;
+        grid-template-rows: 550px;
+    }
+    .main-laptop1.promotions .slider-box,
+    .main-between200.promotions .slider-box,
+    .main-tablet2.promotions .slider-box,
+    .main-8gb.promotions .slider-box,
+    .main-GamingAccessories1.promotions .slider-box {
+        width: 250px;
+    } 
+}
+@media (max-width: 480px) {
+    .back-to {
+        right: 5%;
+        top: 7%;
+        position: fixed;
+    }
+}
+@media (max-width: 1000px) {
+    .installments-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .buy-installments {
+        width: 100%;
+
+    }
+    .buy-installments .buy-choice {
+        width: 100%;
+    }
+    .buy-installments .buy-choice span {
+        width: 70px;
+    }
+    .finance-text {
+        min-width: 90%;
+    }
+    .finance-banner h3 {
+        top: 80%;
+       
+    }
+    .installments-advantages {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 766px) {
+    .buy-installments .buy-choice span {
+        width: 90px;
+    }
+    
+}
+@media (max-width: 640px) {
+    .buy-installments .buy-choice span {
+        width: 110px;
+    }
+    .installments-calc {
+        max-width: 90%;
+    }
+    .installments-calc .top-input,
+    .installments-calc .middle-input,
+    .installments-calc .bottom-input
+     {
+        display: flex;
+        flex-direction: column;
+        min-width: 90%;
+    }
+    .installments-calc .top-input input,
+    .installments-calc .middle-input input,
+    .installments-calc .bottom-input input {
+        min-width: 100%;
+    }
+    .installments-calc .top-input select {
+        min-width: 100%;
+    }
+}
+@media (max-width: 540px) {
+    .finance-banner {
+        display: none;
+    }
+    .buy-installments .buy-choice span {
+        width: 130px;
+    }
+}
+@media (max-width: 425px) {
+    .buy-installments h1 {
+        margin-left: -35px;
+        font-size: 28px;
+    }
+    .buy-installments .buy-choice span {
+        width: 170px;
+    }
+}
+@media(max-width: 1500px) {
+    .most-read {
+        padding: 3% 4%;
+    }
+    
+}
+@media(max-width: 1300px) {
+    .most-read {
+        padding: 3% 1%;
+    }
+}
+@media (max-width: 1100px) {
+    .support-box {
+        min-width: 90%;
+        margin-left: 10%;
+    }
+    .support-box .support {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .support-box .support .support-two {
+        width: 100%;
+    }
+    .dif-img {
+        min-width: 90%;
+    }
+    
+}
+@media (max-width: 989px) {
+    .frequently {
+        width: 100%;
+    }
+    .accordion {
+        width: 90%;
+    }
+    .support-box {
+        width: 50%;
+    }
+    .support-box .support {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .support-box .support .support-two {
+        width: 70%;
+        margin-left: 15%;
+    }
+    .most-read h1 {
+        margin-left: 18px;
+    }
+}
+@media (max-width: 720px) {
+    .support-box {
+        width: 70%;
+    }
+    .support-box .support .support-two {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .dif-img {
+        min-width: 90%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 300px;
+    }
+    .most-read .most-box {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 220px 220px 220px;
+        grid-template-rows: 170px;
+    }
+}
+@media (max-width: 650px) {
+    .most-read .most-box {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 260px 260px;
+        grid-template-rows: 170px;
+    }
+}
+@media (max-width: 520px) {
+    .dif-img {
+        min-width: 90%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 250px;
+        grid-template-rows: 320px;
+    }
+    .support-box .support .support-two{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .support-box .support-sbox.gi {
+        margin-left: -15%;
+    }
+    .most-read .most-box {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 280px;
+        grid-template-rows: 160px;
+    }
+    .frequently {
+        width: 90%;
+        margin-left: -10%;
+    }
+}
+@media (max-width: 480px) {
+    .support-box .support-sbox.gi {
+        margin-left: -6%;
+    }
+}
+@media (max-width: 440px) {
+    .support-box .support-sbox.gi {
+        margin-left: -4%;
+    }
+}
+@media (max-width: 420px) {
+    .support-box .support-sbox.gi {
+        margin-left: -2%;
+    }
+}
+@media (max-width: 400px) {
+    .support-box .support-sbox.gi {
+        margin-left: 0%;
+    }
+}

@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "Samsung S23 Ultra",
+        "price": 1379.99,
+        "image": "img/samsung 23 ultra 1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Samsung S23 Ultra",
+        "price": 1379.89,
+        "image": "img/samsung 23 ultra 1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Samsung S23 Ultra",
+        "price": 13749.99,
+        "image": "img/samsung 23 ultra 1.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Samsung S23 Ultra",
+        "price": 13379.99,
+        "image": "img/samsung 23 ultra 1.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Samsung S23 Ultra",
+        "price": 13679.99,
+        "image": "img/samsung 23 ultra 1.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Samsung S23 Ultra",
+        "price": 17379.99,
+        "image": "img/samsung 23 ultra 1.jpg"
+    }
+
+]

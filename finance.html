@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tex.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-bundle-css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+</head>
+<body class="">
+    <div class="navbar">
+        <nav>
+
+        <div class="logo-search">
+            <a href="index.html" class="logo">Tex.com</a>
+            <div class="row">
+                <div class="search-bar">
+                    <input id="search" class="search-input" type="text" placeholder="What Are You Looking For?">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="result-box">
+                
+            </div>
+            </div>
+            
+           
+            
+        </div>
+         <span class="collapsible-bar"><i id="bar" class="fa-solid fa-bars"></i></span>
+        <div class="cart-account">
+            <div class="cart">
+                <img src="img/cart img.png" alt="">
+                <span class="quantity">0</span>
+                
+            </div>
+            <div  class="account">
+                <div onclick="hideShow()" class="account-sbox">
+                    <i class="fa-solid fa-user"></i>
+                <h2>Account</h2>
+                <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                
+                <div class="no-account">
+                   <div class="account-box">
+                    <p>Enter your email adress</p>
+                    <input type="text" placeholder="Enter your email adress">
+                   </div>
+                   <div class="account-box">
+                    <p>Password</p>
+                    <input type="text" placeholder="Password">
+                   </div>
+                   <button>Login</button>
+                   <div>
+                    <a href="#">Recover Password</a>
+                   </div>
+                   <div>
+                    <a href="#">Register</a>
+                   </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </nav>  
+    </div>
+   
+    <header id="header">
+
+            <ul class="slide-opt">
+                <li class="option"><a href="Phones and tablets.html">Phones</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tablets.html">Tablets</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="laptop.html">Laptops/Pc</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="gaming.html">Gaming, Games</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tv.html">Tv</a><i class="fa-solid fa-chevron-right"></i></li>
+            <span class="close-icon"><i id="close-icon" class="fa-solid fa-chevron-right"></i></span>
+            </ul>
+        
+        <div class="products-bar">
+            <div onclick="optionShowHide()" class="select-menu">
+                <div class="select-btn">
+                <span class="sBtn-text"><i class="fa-solid fa-bars"></i> Products</span>
+            </div>
+            <ul class="options">
+                <li class="option"><a href="Phones and tablets.html">Phones</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tablets.html">Tablets</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="laptop.html">Laptops/Pc</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="gaming.html">Gaming, Games</a><i class="fa-solid fa-chevron-right"></i></li>
+                <li class="option"><a href="tv.html">Tv</a><i class="fa-solid fa-chevron-right"></i></li>
+            </ul>
+            </div>
+            
+            <div class="bar-option">
+                <h2><a href="gifts.html">Promotions</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="finance.html">Finance</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="customersupport.html">Customer Support</a></h2>
+            </div>
+            <div class="bar-option">
+                <h2><a href="stores.html">Stores</a></h2>
+            </div>
+        </div>
+    </header>
+    <div class="finance-banner">
+        <img src="img/credex.jpg" alt="">
+        <h2>Online Credit</h2>
+        <h3>with interest of 1% per month</h3>
+    </div>
+
+    <div class="buy-installments">
+        <h1>Buy in buy in installments,ONLINE,in 3 easy steps</h1>
+        <div class="buy-choice">
+            <span>1</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum maiores doloremque excepturi</p>
+        </div>
+        <div class="buy-choice">
+            <span>2</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum maiores doloremque excepturi</p>
+        </div>
+        <div class="buy-choice">
+            <span>3</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum maiores doloremque excepturi</p>
+        </div>
+    </div>
+
+    <div class="installments-box">
+        <div class="installments-calc">
+            <h1>Installments Calculator</h1>
+            <h2>Fill in the value of the products, select the desired number of installments and find out the monthly rate:</h2>
+        <div class="top-input">
+            <div class="input">
+                <p>Total price of products</p>
+                <input type="text" placeholder="$1400">
+            </div>
+            <div class="input">
+                <p>Number of installments</p>
+                <select>
+                    <option>59</option>
+                    <option>48</option>
+                    <option>36</option>
+                    <option>24</option>
+                    <option>18</option>
+                    <option>12</option>
+                    <option>6</option>
+                </select>
+            </div>
+        </div>
+        <div class="middle-input">
+            <div class="input">
+                <p>Name</p>
+                <input type="text">
+            </div>
+            <div class="input">
+                <p>Surname</p>
+                <input type="text">
+            </div>
+            
+        </div>
+        <div class="bottom-input">
+           <div class="input">
+                <p>Phone</p>
+                <input type="text" placeholder="Phone Number">
+            </div>
+            <div class="input">
+                <p>Email Adress</p>
+                <input type="text">
+            </div> 
+        </div>
+        <span>
+            <input type="checkbox">
+            <p>I agree to the terms & conditions of Tex.com</p>
+        </span>
+        <div class="button-box">
+            <button>I want to be contacted</button>
+        </div>
+         
+        </div>
+        <div class="installments-advantages">
+            <h2>Advantages in the online installments from Credex:</h2>
+            <div class="advantage-box">
+                <img src="img/camera.jpg" alt="">
+                <p>Process 100% online</p>
+            </div>
+            <div class="advantage-box">
+                <img src="img/clock.jpg" alt="">
+                <p>Quick response 24/7</p>
+            </div>
+            <div class="advantage-box">
+                <img src="img/sms.jpg" alt="">
+                <p>Online signature of the contract</p>
+            </div>
+            <div class="advantage-box">
+                <img src="img/walk.jpg" alt="">
+                <p>No trips to the store or bank</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="eligibility-box">
+           <div class="conditions">
+            <h1>Eligibility conditions:</h1>
+            <span>
+                <img src="img/star.jpg" alt="">
+                <p>European citizens</p>
+            </span>
+            <span>
+                <img src="img/star.jpg" alt="">
+                <p>Age between 18 and 70 years</p>
+            </span>
+            <span>
+                <img src="img/star.jpg" alt="">
+                <p>Credit value: $100-$3000</p>
+            </span>
+            <span>
+                <img src="img/star.jpg" alt="">
+                <p>Installment period 6-59 months</p>
+            </span>
+            
+           </div>
+           <div class="documents">
+            <h1>Required documents:</h1>
+            <span>
+                <img src="img/star.jpg" alt="">
+                <p>Original Identity Card</p>
+            </span>
+           </div>
+    </div>
+    <div class="finance-text">
+        <h3>More about our finance policy:</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis labore, porro qui totam veritatis cum nostrum obcaecati soluta eaque ratione odio incidunt adipisci accusantium nihil velit. Temporibus sequi incidunt excepturi quibusdam sint dolore a dolorum quaerat, fugiat officiis libero hic deleniti impedit blanditiis, facere maiores in? Mollitia alias, dolorum excepturi, perferendis quae cumque voluptatem voluptatum officiis esse libero illo odit facere nobis? Cupiditate sint vero doloribus quidem dolores eius ipsam enim suscipit veniam. Ut deleniti quasi expedita minima! Commodi est quos sit amet, maiores, nobis sed delectus voluptatum dolor animi quibusdam facilis repellendus possimus qui placeat at velit nulla quod culpa autem ipsa distinctio magni? Quis facere labore culpa modi. Exercitationem, voluptates dicta voluptatibus inventore corrupti rerum distinctio ullam qui repellendus at esse! Quia quis quidem a eveniet odio unde tempore, minima accusamus culpa. Sunt magnam obcaecati praesentium ea dolore! Quis, assumenda consequatur officia odit eaque quaerat. Voluptatem laboriosam in quia, voluptate nemo amet numquam. Aliquam molestias, voluptatem omnis sunt ex laborum cum aut aperiam exercitationem eligendi obcaecati voluptate reiciendis magnam ipsa modi delectus officiis a mollitia! Reprehenderit eaque itaque cumque dolores, blanditiis commodi. Voluptatum perspiciatis eligendi, explicabo totam, incidunt inventore est sunt quos iste vel sapiente ipsa rem vero fugit molestias id. Corrupti omnis quis tempora rerum atque provident consequuntur veniam vel vitae, tempore a sequi unde ipsum esse laudantium delectus enim, doloribus facilis distinctio soluta ad officia necessitatibus. Voluptatibus est repudiandae cum quaerat dicta quo, magni mollitia repellat facere eius nobis praesentium tempore quibusdam ea beatae, qui aliquid omnis reiciendis voluptas suscipit laboriosam neque quas. Magni odio alias amet est, tempore quaerat, enim minus deserunt ipsa dignissimos placeat earum voluptates? Enim quis adipisci mollitia quisquam cum nulla aliquam autem id beatae quaerat totam fugiat nisi, minus eius ut, exercitationem magnam ipsam? Accusantium tempora ut esse, voluptas porro voluptate magnam est omnis. Ullam, id delectus. Qui et quas tenetur dolore cupiditate! Aliquam, recusandae laborum asperiores sequi fugiat minima atque harum blanditiis hic beatae mollitia, quo deleniti in voluptatem adipisci vitae illum, debitis sit. Commodi quibusdam praesentium quod laudantium veritatis eius quae aspernatur consequuntur iusto, aliquid expedita nam, ab distinctio, ipsam unde tempora perspiciatis fugit temporibus enim. Adipisci, asperiores illum quia debitis pariatur recusandae, aut ducimus non error enim nam. Cumque quam sapiente distinctio enim, dolorem exercitationem quae tempore praesentium saepe, neque dignissimos a dolorum. Iure tenetur incidunt, molestias ex excepturi facilis placeat eaque. Ex quis obcaecati quam, consequatur iure eaque in velit sapiente fuga quos illo praesentium neque magnam inventore expedita temporibus optio? Debitis iure alias unde, expedita cumque animi? Eum eveniet, quisquam voluptates vitae laudantium modi tempora dignissimos, reiciendis aliquam quod ipsum inventore enim, perferendis fugit. Ratione nobis explicabo voluptatibus earum omnis quibusdam facere veritatis dignissimos quaerat laboriosam ex, error, quam soluta consequatur. Nostrum quaerat et voluptas sunt, at ea ab facere non velit quia nemo mollitia recusandae aperiam, iusto, suscipit consequatur nihil ratione fugit nisi beatae quidem odio. Maxime officia eius optio! Sapiente illo, iste cumque facilis distinctio expedita repellat hic eum nihil quod animi consectetur sit placeat, alias rem. Expedita, id? Obcaecati provident quia deserunt! Expedita, illum? Ratione quisquam vitae iste veritatis! Quaerat enim dicta perferendis ut rerum voluptates unde architecto? Sapiente culpa reiciendis, ad excepturi omnis ut quod? Repellendus, aliquid, consequatur atque soluta quisquam fugit ratione, hic provident eius iure corrupti nihil. Esse, dolore autem!</p>
+    </div>
+
+<div class="footer-bar">
+    <img src="img/best-buy-icon.png">
+    <span>
+        <h2>The best price-quality ratio</h2>
+        <p>According to the Best Buy Award 2023/2024 survey conducted by the iCertias organization.</p>
+    </span>
+    <div class="download-icons">
+        <img class="google-play" src="img/google play.jpg" alt="">
+        <img class="app-store" src="img/app store.jpg" alt="">
+    </div>
+</div>
+       
+<footer>
+    <div class="footer-box">
+        <h2>About Tex</h2>
+        <p>About us</p>
+        <p>Marketplace</p>
+        <p>Careers</p>
+        <p>Products Categories</p>
+        <p>Tax free</p>
+    </div>
+    <div class="footer-box">
+        <h2>Clients Support</h2>
+        <p>Support articles</p>
+        <p>Contact</p>
+        <p>Return products</p>
+        <p>Complaints</p>
+    </div>
+    <div class="footer-box">
+        <h2>Legal information</h2>
+        <p>information about DEEE</p>
+        <p>Cookies policy</p>
+        <p>Terms and conditions</p>
+        <p>A.N.P.C.</p>
+    </div>
+    <div class="footer-box contact">
+        <h2>Contact</h2>
+        <p>Phone: [123]-456-789</p>
+        <p>Contact Form</p>
+    </div>
+    <div class="footer-box communication">
+        <h2>Communication</h2>
+        <p>Subscribe to newsletter</p>
+    </div>
+    <div class="footer-box">
+        <h2>Follow-us</h2>
+        <span>
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-x-twitter"></i></div>
+            <div><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><i class="fa-brands fa-youtube"></i></div>
+        </span>
+            
+    </div>
+</footer>
+
+<script src="swiper-bundle js.js"></script>
+<script src="https://kit.fontawesome.com/5111c4ecb9.js" crossorigin="anonymous"></script>
+<script src="finance.js"></script>
+</body>
+</html>
